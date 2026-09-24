@@ -3,6 +3,7 @@
 import { useI18n } from "@/i18n/context";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 interface Props {
   slug: string;
@@ -27,8 +28,44 @@ export default function ProductCategoryShell({ slug }: Props) {
   const total = partA + partB;
   const heroImg = categoryImages[slug] || "/assets/vials-Ck5soEMR.jpg";
 
+  const categorySEO: Record<string, { title: string; desc: string; keywords: string }> = {
+    exosome: {
+      title: "Exosome Products — Vesco Science",
+      desc: "Browse Vesco Science exosome product range: advanced extracellular vesicle formulations for regenerative medicine and aesthetic applications.",
+      keywords: "exosome products, extracellular vesicle formulations, regenerative medicine, EV therapy",
+    },
+    "dermal-fillers": {
+      title: "Dermal Filler Products — Vesco Science",
+      desc: "Hyaluronic acid dermal fillers and injectable aesthetic products from Vesco Science for professional healthcare applications.",
+      keywords: "dermal fillers, hyaluronic acid filler, injectable aesthetic, HA dermal filler",
+    },
+    "peptide-bio-remodeling": {
+      title: "Peptide Bio Remodeling Products — Vesco Science",
+      desc: "Peptide-based bio remodeling and regenerative formulations from Vesco Science for advanced aesthetic treatments.",
+      keywords: "peptide bio remodeling, regenerative peptides, bio remodeling products",
+    },
+    "botulinum-toxin": {
+      title: "Botulinum Toxin Products — Vesco Science",
+      desc: "Professional botulinum toxin products and formulations from Vesco Science for aesthetic and medical applications.",
+      keywords: "botulinum toxin, botox products, neuromodulator, wrinkle treatment",
+    },
+    "pdrn-pn": {
+      title: "PDRN / PN Products — Vesco Science",
+      desc: "Polydeoxyribonucleotide (PDRN) and polynucleotide (PN) regenerative products from Vesco Science.",
+      keywords: "PDRN products, PN polynucleotide, regenerative biomaterials, tissue repair products",
+    },
+  };
+
+  const seo = categorySEO[slug] || { title: `${cat.title} — Vesco Science`, desc: cat.desc, keywords: "" };
+
   return (
     <main style={{ backgroundColor: "#f7fafc", color: "#17212b" }}>
+      <SEOHead
+        title={seo.title}
+        description={seo.desc}
+        keywords={seo.keywords}
+        canonical={`https://www.vescoscience.com/products/${slug}`}
+      />
       {/* Hero */}
       <section className="relative isolate overflow-hidden" style={{ backgroundColor: "#0b1f33", color: "#fff" }}>
         <img src={heroImg} alt="" className="absolute inset-0 h-full w-full object-cover" style={{ opacity: 0.25 }} />

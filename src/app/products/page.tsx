@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useI18n } from "@/i18n/context";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 const BASE = "";
 
@@ -10,6 +11,12 @@ export default function ProductsPage() {
   const { t } = useI18n();
   return (
     <>
+      <SEOHead
+        title="Products — Vesco Science Regenerative Biologics Catalogue"
+        description="Browse Vesco Science product catalogue: exosomes, dermal fillers, peptide bio remodeling, botulinum toxin, and PDRN/PN regenerative formulations."
+        keywords="regenerative products, exosome products, dermal fillers Korea, peptide bio remodeling, botulinum toxin, PDRN PN products"
+        canonical="https://www.vescoscience.com/products"
+      />
       {/* ===== HERO ===== */}
       <header className="relative isolate overflow-hidden" style={{ backgroundColor: "#071726" }}>
         <img src={`${BASE}/assets/vials-Ck5soEMR.jpg`} alt="" className="absolute inset-0 h-full w-full object-cover" style={{ opacity: 0.3 }} />

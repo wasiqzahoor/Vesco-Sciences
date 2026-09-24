@@ -24,7 +24,29 @@ const images: Record<string, string> = {
 };
 
 export function TechHero({ slug, title, description }: { slug: string; title: string; description: string }) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
+  
+  const techTitles: Record<string, { en: string; ko: string }> = {
+    exosome: { en: "Exosome Technology", ko: "엑소좀 기술" },
+    "pdrn-pn": { en: "PDRN / PN Technology", ko: "PDRN / PN 기술" },
+    lyophilization: { en: "Lyophilization Technology", ko: "동결건조 기술" },
+    formulation: { en: "Formulation Technology", ko: "재생 제형 기술" },
+    "cold-chain": { en: "Cold Chain Technology", ko: "콜드체인 기술" },
+    custom: { en: "Custom Development", ko: "맞춤 제형 개발" },
+  };
+  
+  const techDescriptions: Record<string, { en: string; ko: string }> = {
+    exosome: { en: "Isolation, purification, concentration and characterization of extracellular vesicles for scientific research and development applications.", ko: "세포외소포의 분리, 정제, 농축 및 특성 분석 기술입니다." },
+    "pdrn-pn": { en: "Polynucleotide and PDRN platform for regenerative and aesthetic applications.", ko: "재생 및 에스테틱 적용을 위한 폴리뉴클레오타이드 및 PDRN 플랫폼." },
+    lyophilization: { en: "Freeze-drying process development for sensitive biologics.", ko: "민감한 바이오 소재를 보호하고 보관 안정성을 확장하는 동결건조 공정 개발." },
+    formulation: { en: "Advanced formulation development combining biologics, peptides, and HA systems.", ko: "바이오 소재, 펩타이드, 히알루론산 시스템을 결합한 목적 지향형 복합 제형." },
+    "cold-chain": { en: "Temperature-controlled handling, storage and transport for sensitive biologics.", ko: "온도 민감 제품을 위한 취급, 보관 및 운송 전 과정의 온도 관리 체계." },
+    custom: { en: "Custom formulation and product development tailored to specific requirements.", ko: "농도, 제형, 포장, 문서 요건까지 고객 요구에 맞춘 개별 개발." },
+  };
+  
+  const heroTitle = techTitles[slug]?.[locale as "en" | "ko"] || title;
+  const heroDesc = techDescriptions[slug]?.[locale as "en" | "ko"] || description;
+  
   return (
     <header className="relative isolate overflow-hidden" style={{ backgroundColor: "#071726" }}>
       <img src={images[slug]} alt="" className="absolute inset-0 h-full w-full object-cover" style={{ opacity: 0.3 }} loading="eager" />
@@ -33,14 +55,14 @@ export function TechHero({ slug, title, description }: { slug: string; title: st
         <nav aria-label="Breadcrumb" className="mb-8 text-[0.8rem]" style={{ color: "rgba(255,255,255,0.45)" }}>
           <Link href="/" className="transition-colors hover:text-[#35b8b0]">{t.technology.breadcrumbHome}</Link>
           <span className="mx-2" style={{ color: "rgba(255,255,255,0.25)" }}>/</span>
-          <span style={{ color: "rgba(255,255,255,0.75)" }}>{title}</span>
+          <span style={{ color: "rgba(255,255,255,0.75)" }}>{heroTitle}</span>
         </nav>
         <p className="eyebrow" style={{ color: "#35b8b0" }}>
           <span className="mr-3 inline-block h-px w-8 align-middle opacity-50" style={{ backgroundColor: "currentColor" }} />
           {t.technology.breadcrumbTech}
         </p>
-        <h1 className="mt-6 max-w-4xl text-white font-semibold leading-[1.06] text-[clamp(2.1rem,4.6vw,3.9rem)]">{title}</h1>
-        <p className="mt-7 max-w-2xl text-[1.0625rem] leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>{description}</p>
+        <h1 className="mt-6 max-w-4xl text-white font-semibold leading-[1.06] text-[clamp(2.1rem,4.6vw,3.9rem)]">{heroTitle}</h1>
+        <p className="mt-7 max-w-2xl text-[1.0625rem] leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>{heroDesc}</p>
       </div>
       <div className="absolute inset-x-0 bottom-0 h-px" style={{ background: "linear-gradient(to right, transparent, rgba(53,184,176,0.6), transparent)" }} />
     </header>

@@ -3,11 +3,18 @@
 import Link from "next/link";
 import { useI18n } from "@/i18n/context";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 export default function AboutPage() {
   const { t } = useI18n();
   return (
     <>
+      <SEOHead
+        title="About Us — Vesco Science Korean Biotechnology Company"
+        description="Learn about Vesco Science, a South Korea-based biotechnology company focused on regenerative medicine, exosome research, and advanced manufacturing for global partners."
+        keywords="Vesco Science about, Korean biotech company, regenerative medicine Korea, biotechnology manufacturer"
+        canonical="https://www.vescoscience.com/about"
+      />
       {/* ===== HERO ===== */}
       <header className="relative isolate overflow-hidden" style={{ backgroundColor: "#071726" }}>
         <img src="/assets/seoul-biotech-campus-D3ksiCpk.jpg" alt="" className="absolute inset-0 h-full w-full object-cover" style={{ opacity: 0.25 }} />

@@ -2,10 +2,17 @@
 
 import { TechHero, RelatedTechnologies, CTABanner } from "@/components/TechnologyPageShell";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 export default function PdrnPnTechnologyPage() {
   return (
     <>
+      <SEOHead
+        title="PDRN / PN Technology — Vesco Science"
+        description="Polydeoxyribonucleotide (PDRN) and polynucleotide (PN) technology platforms for regenerative aesthetics and tissue repair."
+        keywords="PDRN technology, PN polynucleotide, regenerative biomaterials, tissue repair"
+        canonical="https://www.vescoscience.com/technology/pdrn-pn"
+      />
       <TechHero
         slug="pdrn-pn"
         title="PDRN / PN Technology"

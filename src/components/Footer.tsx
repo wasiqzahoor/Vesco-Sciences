@@ -73,7 +73,7 @@ export default function Footer() {
         </div>
         <div className="mt-16 flex flex-col gap-3 pt-7 text-[0.78rem] md:flex-row md:items-center md:justify-between" style={{ borderTop: "1px solid rgba(255,255,255,0.1)", color: "rgba(255,255,255,0.4)" }}>
           <p>{t.footer.copyright}</p>
-          <p><a href="https://www.newaitechsofts.com" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-teal" style={{ color: "rgba(255,255,255,0.4)" }}>{t.footer.disclaimer}</a></p>
+          <p><a href="https://www.newaitechsofts.com" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: "rgba(255,255,255,0.55)" }}>{t.footer.disclaimer}</a></p>
         </div>
       </div>
     </footer>

@@ -1,6 +1,7 @@
 "use client";
 
 import { TechHero, RelatedTechnologies, CTABanner } from "@/components/TechnologyPageShell";
+import SEOHead from "@/components/SEOHead";
 
 const developmentParameters = [
   { area: "Active concentration", example: "Target concentration and loading" },
@@ -28,6 +29,12 @@ const developmentCycle = [
 export default function CustomTechnologyPage() {
   return (
     <>
+      <SEOHead
+        title="Custom Development — Vesco Science"
+        description="Custom formulation and product development services tailored to specific concentration, packaging, and regulatory requirements."
+        keywords="custom biotech development, bespoke formulation, private label biotech"
+        canonical="https://www.vescoscience.com/technology/custom"
+      />
       <TechHero
         slug="custom"
         title="Custom Formulation Technology"

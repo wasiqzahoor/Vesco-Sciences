@@ -2,10 +2,17 @@
 
 import { TechHero, RelatedTechnologies, CTABanner } from "@/components/TechnologyPageShell";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 export default function ExosomeTechnologyPage() {
   return (
     <>
+      <SEOHead
+        title="Exosome Technology — Vesco Science"
+        description="Advanced exosome isolation, purification, and characterization technology at Vesco Science for regenerative medicine applications."
+        keywords="exosome technology, extracellular vesicles, HUC-MSC exosomes, exosome purification"
+        canonical="https://www.vescoscience.com/technology/exosome"
+      />
       <TechHero
         slug="exosome"
         title="Exosome & Extracellular Vesicle Technology"

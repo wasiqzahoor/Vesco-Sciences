@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useI18n } from "@/i18n/context";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 const BASE = "";
 
@@ -17,6 +18,12 @@ export default function InsightsPage() {
 
   return (
     <>
+      <SEOHead
+        title="Science & Insights — Vesco Science Blog"
+        description="Expert insights on exosome science, PDRN/PN technology, hyaluronic acid, and regenerative biotechnology manufacturing."
+        keywords="biotech insights, exosome science, PDRN PN research, regenerative medicine blog"
+        canonical="https://www.vescoscience.com/insights"
+      />
       {/* ===== HERO ===== */}
       <header className="relative isolate overflow-hidden" style={{ backgroundColor: "#071726" }}>
         <img src={`${BASE}/assets/molecular-CIuWq-Al.jpg`} alt="" className="absolute inset-0 h-full w-full object-cover" style={{ opacity: 0.3 }} />

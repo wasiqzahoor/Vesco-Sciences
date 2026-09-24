@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useI18n } from "@/i18n/context";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 const BASE = "";
 
@@ -10,6 +11,12 @@ export default function ResearchPage() {
   const { t } = useI18n();
   return (
     <>
+      <SEOHead
+        title="Research & Development — Vesco Science"
+        description="Vesco Science R&D: biologics research, exosome science, formulation engineering, analytical development, and process optimization."
+        keywords="biotech R&D, exosome research, formulation science, analytical development"
+        canonical="https://www.vescoscience.com/research"
+      />
       {/* ===== HERO ===== */}
       <header className="relative isolate overflow-hidden" style={{ backgroundColor: "#071726" }}>
         <img src={`${BASE}/assets/research-team-BMV1NwAO.jpg`} alt="" className="absolute inset-0 h-full w-full object-cover" style={{ opacity: 0.3 }} />

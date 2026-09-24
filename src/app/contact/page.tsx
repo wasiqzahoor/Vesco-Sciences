@@ -2,11 +2,18 @@
 
 import { useI18n } from "@/i18n/context";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 export default function ContactPage() {
   const { t } = useI18n();
   return (
     <>
+      <SEOHead
+        title="Contact Us — Vesco Science"
+        description="Contact Vesco Science for product inquiries, custom manufacturing, partnership opportunities, and technical support."
+        keywords="contact Vesco Science, biotech inquiry, custom manufacturing contact"
+        canonical="https://www.vescoscience.com/contact"
+      />
       <section style={{ backgroundColor: "var(--navy-deep)" }} className="pt-24 sm:pt-28 md:pt-32 pb-12 md:pb-20 text-white">
         <div className="w-full max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
           <ScrollReveal>

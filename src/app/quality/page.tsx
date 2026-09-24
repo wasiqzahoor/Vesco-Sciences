@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useI18n } from "@/i18n/context";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 const BASE = "";
 
@@ -10,6 +11,12 @@ export default function QualityPage() {
   const { t } = useI18n();
   return (
     <>
+      <SEOHead
+        title="Quality Management — Vesco Science"
+        description="Vesco Science quality management system: GMP standards, analytical testing, batch release, and regulatory compliance for biologics."
+        keywords="quality management, GMP biologics, batch release, regulatory compliance"
+        canonical="https://www.vescoscience.com/quality"
+      />
       {/* ===== HERO ===== */}
       <header className="relative isolate overflow-hidden" style={{ backgroundColor: "#071726" }}>
         <img src={`${BASE}/assets/qc-lab-mOryit6A.jpg`} alt="" className="absolute inset-0 h-full w-full object-cover" style={{ opacity: 0.3 }} />

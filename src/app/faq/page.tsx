@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useI18n } from "@/i18n/context";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 const BASE = "";
 
@@ -48,6 +49,12 @@ export default function FAQPage() {
 
   return (
     <>
+      <SEOHead
+        title="Frequently Asked Questions — Vesco Science"
+        description="Common questions about Vesco Science products, technology, manufacturing capabilities, and partnership opportunities."
+        keywords="biotech FAQ, exosome FAQ, manufacturing questions, partnership FAQ"
+        canonical="https://www.vescoscience.com/faq"
+      />
       {/* ===== HERO ===== */}
       <header className="relative isolate overflow-hidden" style={{ backgroundColor: "#071726" }}>
         <img src={`${BASE}/assets/qc-lab-mOryit6A.jpg`} alt="" className="absolute inset-0 h-full w-full object-cover" style={{ opacity: 0.3 }} />

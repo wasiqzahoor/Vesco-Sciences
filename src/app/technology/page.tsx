@@ -2,10 +2,17 @@
 
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 export default function TechnologyPage() {
   return (
     <>
+      <SEOHead
+        title="Technology Platforms — Vesco Science"
+        description="Six core technology platforms at Vesco Science: exosome, PDRN/PN, lyophilization, formulation, cold chain, and custom development for regenerative biologics."
+        keywords="biotechnology platforms, exosome technology, PDRN PN technology, lyophilization, formulation development"
+        canonical="https://www.vescoscience.com/technology"
+      />
       {/* ===== HERO ===== */}
       <header className="relative isolate overflow-hidden" style={{ backgroundColor: "#071726" }}>
         <img src="/assets/molecular-CIuWq-Al.jpg" alt="" className="absolute inset-0 h-full w-full object-cover" style={{ opacity: 0.3 }} />

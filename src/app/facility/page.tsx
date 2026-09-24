@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useI18n } from "@/i18n/context";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 const BASE = "";
 
@@ -10,6 +11,12 @@ export default function FacilityPage() {
   const { t } = useI18n();
   return (
     <>
+      <SEOHead
+        title="Manufacturing Facility — Vesco Science"
+        description="Vesco Science state-of-the-art biologics manufacturing facility in Korea with cleanroom, lyophilization, and quality control labs."
+        keywords="biotech manufacturing facility, cleanroom Korea, biologics production"
+        canonical="https://www.vescoscience.com/facility"
+      />
       {/* ===== HERO ===== */}
       <header className="relative isolate overflow-hidden" style={{ backgroundColor: "#071726" }}>
         <img src={`${BASE}/assets/vials-Ck5soEMR.jpg`} alt="" className="absolute inset-0 h-full w-full object-cover" style={{ opacity: 0.3 }} />

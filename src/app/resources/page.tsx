@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useI18n } from "@/i18n/context";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 const BASE = "";
 
@@ -10,6 +11,12 @@ export default function ResourcesPage() {
   const { t } = useI18n();
   return (
     <>
+      <SEOHead
+        title="Resources & Downloads — Vesco Science"
+        description="Technical documents, product datasheets, and regulatory resources from Vesco Science."
+        keywords="biotech resources, product datasheets, technical documents"
+        canonical="https://www.vescoscience.com/resources"
+      />
       {/* ===== HERO ===== */}
       <header className="relative isolate overflow-hidden" style={{ backgroundColor: "#071726" }}>
         <img src={`${BASE}/assets/documents-C3E9fEEy.jpg`} alt="" className="absolute inset-0 h-full w-full object-cover" style={{ opacity: 0.3 }} />

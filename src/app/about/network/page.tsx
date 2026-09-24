@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useI18n } from "@/i18n/context";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 const BASE = "";
 
@@ -10,6 +11,12 @@ export default function NetworkPage() {
   const { t } = useI18n();
   return (
     <>
+      <SEOHead
+        title="Global Network & Partnership — Vesco Science"
+        description="Vesco Science global network: Korean biotechnology partnerships, international distribution, and collaboration with EverCeutical for worldwide reach."
+        keywords="Vesco Science network, global biotech partnership, Korean biotech distribution"
+        canonical="https://www.vescoscience.com/about/network"
+      />
       {/* ===== HERO ===== */}
       <header className="relative isolate overflow-hidden" style={{ backgroundColor: "#071726" }}>
         <img src={`${BASE}/assets/cleanroom-DZtXjF0-.jpg`} alt="" className="absolute inset-0 h-full w-full object-cover" style={{ opacity: 0.3 }} />

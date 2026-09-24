@@ -3,12 +3,19 @@
 import Link from "next/link";
 import { useI18n } from "@/i18n/context";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 export default function HomePage() {
   const { t } = useI18n();
 
   return (
     <>
+      <SEOHead
+        title="Vesco Science — Korean Regenerative Biotechnology & Custom Manufacturing"
+        description="Vesco Science develops advanced biotechnology solutions: exosome, PDRN/PN, HA, and peptide-based regenerative formulations. Custom manufacturing, lyophilization, and cold chain from Korea."
+        keywords="Korean biotechnology, regenerative medicine, exosome manufacturer Korea, PDRN PN, custom manufacturing, lyophilization, hyaluronic acid filler, peptide bio remodeling, botulinum toxin Korea"
+        canonical="https://www.vescoscience.com"
+      />
       {/* ===== 01. HERO (UNCHANGED) ===== */}
       <section className="relative isolate flex min-h-[92vh] items-center overflow-hidden" style={{ backgroundColor: "#071726" }}>
         <video src="/bg.mp4" autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover" style={{ opacity: 0.45, animation: "slowZoom 26s ease-in-out infinite alternate" }} />

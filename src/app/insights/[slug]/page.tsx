@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useI18n } from "@/i18n/context";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 const BASE = "";
 
@@ -72,6 +73,12 @@ export default function InsightDetailPage() {
 
   return (
     <>
+      <SEOHead
+        title={article.title}
+        description={article.desc}
+        keywords={`${article.tag}, Vesco Science, regenerative biotechnology`}
+        canonical={`https://www.vescoscience.com/insights/${article.slug}`}
+      />
       {/* ===== HERO ===== */}
       <header className="relative isolate overflow-hidden" style={{ backgroundColor: "#071726" }}>
         {article.image ? (

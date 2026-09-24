@@ -2,10 +2,17 @@
 
 import { TechHero, RelatedTechnologies, CTABanner } from "@/components/TechnologyPageShell";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 export default function FormulationTechnologyPage() {
   return (
     <>
+      <SEOHead
+        title="Formulation Technology — Vesco Science"
+        description="Advanced formulation development combining peptides, hyaluronic acid, and biologics for regenerative and aesthetic applications."
+        keywords="formulation development, peptide formulation, HA formulation, regenerative formulations"
+        canonical="https://www.vescoscience.com/technology/formulation"
+      />
       <TechHero
         slug="formulation"
         title="Regenerative Formulation Technology"

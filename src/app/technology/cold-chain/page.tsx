@@ -2,10 +2,17 @@
 
 import { TechHero, RelatedTechnologies, CTABanner } from "@/components/TechnologyPageShell";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 export default function ColdChainTechnologyPage() {
   return (
     <>
+      <SEOHead
+        title="Cold Chain Technology — Vesco Science"
+        description="Temperature-controlled handling, storage, and transport systems for sensitive biologics and regenerative products."
+        keywords="cold chain biotech, temperature controlled transport, biologics logistics"
+        canonical="https://www.vescoscience.com/technology/cold-chain"
+      />
       <TechHero
         slug="cold-chain"
         title="Cold Chain Technology"

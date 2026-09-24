@@ -2,10 +2,17 @@
 
 import { TechHero, RelatedTechnologies, CTABanner } from "@/components/TechnologyPageShell";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEOHead from "@/components/SEOHead";
 
 export default function LyophilizationTechnologyPage() {
   return (
     <>
+      <SEOHead
+        title="Lyophilization Technology — Vesco Science"
+        description="Freeze-drying and lyophilization technology for biologics, preserving active ingredient stability and extending shelf life."
+        keywords="lyophilization, freeze drying biologics, shelf life extension, biologics preservation"
+        canonical="https://www.vescoscience.com/technology/lyophilization"
+      />
       <TechHero
         slug="lyophilization"
         title="Lyophilization Technology"
