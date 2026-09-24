@@ -108,50 +108,103 @@ export default function NetworkPage() {
       </section>
 
       {/* ===== GLOBAL PARTNERSHIP ===== */}
-      <section className="relative isolate overflow-hidden" style={{ backgroundColor: "#0b1f33" }}>
-        <div className="absolute inset-0 navy-grid" style={{ opacity: 0.6 }} />
-        <div className="relative mx-auto w-full max-w-[1240px] px-6 py-20 md:px-10 md:py-28">
-          <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
+      <section className="relative isolate overflow-hidden" style={{ backgroundColor: "#071726" }}>
+        <div className="absolute inset-0 navy-grid" style={{ opacity: 0.4 }} />
+        <div className="absolute top-0 right-0 h-[500px] w-[500px] rounded-full blur-[200px]" style={{ background: "radial-gradient(circle, rgba(53,184,176,0.12), transparent 70%)" }} />
+        <div className="absolute bottom-0 left-0 h-[400px] w-[400px] rounded-full blur-[160px]" style={{ background: "radial-gradient(circle, rgba(39,106,145,0.1), transparent 70%)" }} />
+        <div className="relative mx-auto w-full max-w-[1240px] px-6 py-24 md:px-10 md:py-32">
+          {/* Top Eyebrow */}
+          <ScrollReveal>
+            <div className="text-center">
+              <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5" style={{ background: "linear-gradient(135deg, rgba(53,184,176,0.15), rgba(53,184,176,0.05))", border: "1px solid rgba(53,184,176,0.25)" }}>
+                <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#35b8b0" }} />
+                <span className="text-[0.68rem] font-bold tracking-[0.18em] uppercase" style={{ color: "#35b8b0" }}>{t.network.globalEyebrow}</span>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Main Title */}
+          <ScrollReveal>
+            <div className="mt-10 text-center">
+              <h2 className="text-white text-[clamp(2rem,4.5vw,3.8rem)] leading-[1.08] font-semibold" style={{ letterSpacing: "-0.025em" }}>
+                Vesco Science <span className="inline-block mx-2 text-[clamp(1.5rem,3vw,2.5rem)]" style={{ color: "#35b8b0" }}>×</span> EverCeutical
+              </h2>
+              <p className="mt-5 max-w-2xl mx-auto text-[1.0625rem] leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>
+                {t.network.globalDesc}
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Partnership Cards */}
+          <div className="mt-16 grid gap-6 lg:grid-cols-2 lg:gap-8">
+            {/* Vesco Science Card */}
             <ScrollReveal>
-              <div>
-                <p className="eyebrow" style={{ color: "#35b8b0" }}>
-                  <span className="mr-3 inline-block h-px w-8 align-middle opacity-50" style={{ backgroundColor: "currentColor" }} />
-                  {t.network.globalEyebrow}
-                </p>
-                <h2 className="mt-5 text-[clamp(1.75rem,3.4vw,2.85rem)] leading-[1.12] font-semibold text-white">
-                  {t.network.globalTitle}
-                </h2>
-                <p className="mt-5 text-[1rem] leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>
-                  {t.network.globalDesc}
-                </p>
-                <div className="mt-8 space-y-4">
-                  {t.network.globalRoles.map((role: { label: string; value: string }, i: number) => (
-                    <div key={i} className="flex items-center gap-4">
-                      <span className="text-[0.78rem] font-semibold tracking-[0.1em] uppercase" style={{ color: "#35b8b0" }}>{role.label}</span>
-                      <span className="text-[0.88rem]" style={{ color: "rgba(255,255,255,0.7)" }}>{role.value}</span>
+              <div className="relative rounded-2xl p-8 md:p-10 transition-all duration-300 hover:-translate-y-1" style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02))", border: "1px solid rgba(53,184,176,0.2)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", boxShadow: "0 8px 32px rgba(0,0,0,0.2)" }}>
+                <div className="absolute top-0 left-0 w-full h-1 rounded-t-2xl" style={{ background: "linear-gradient(to right, #35b8b0, transparent)" }} />
+                <div className="flex items-center gap-4 mb-6">
+                  <img src="/assets/vesco_logo-KfffcaeC.png" alt="Vesco Science" className="h-10 sm:h-12" />
+                </div>
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-[0.72rem] font-bold tracking-[0.14em] uppercase" style={{ color: "#35b8b0" }}>Vesco Science</span>
+                  <span className="h-px flex-1" style={{ background: "linear-gradient(to right, rgba(53,184,176,0.4), transparent)" }} />
+                </div>
+                <div className="space-y-3">
+                  {["Research & Development", "Advanced Technology Platforms", "Controlled Manufacturing"].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <div className="flex h-7 w-7 items-center justify-center rounded-full" style={{ background: "linear-gradient(135deg, rgba(53,184,176,0.25), rgba(53,184,176,0.1))" }}>
+                        <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="#35b8b0" strokeWidth="3"><path d="M20 6L9 17l-5-5" /></svg>
+                      </div>
+                      <span className="text-[0.95rem]" style={{ color: "rgba(255,255,255,0.8)" }}>{item}</span>
                     </div>
                   ))}
                 </div>
               </div>
             </ScrollReveal>
+
+            {/* EverCeutical Card */}
             <ScrollReveal>
-              <div className="rounded-sm p-10" style={{ border: "1px solid rgba(255,255,255,0.1)", backgroundColor: "rgba(255,255,255,0.03)" }}>
-                <span className="text-[0.68rem] font-bold tracking-[0.18em] uppercase" style={{ color: "#35b8b0" }}>{t.network.globalTag}</span>
-                <div className="mt-8 flex items-center gap-6">
-                  <img src="/assets/everceutical-logo.png" alt="EverCeutical" className="h-10" />
+              <div className="relative rounded-2xl p-8 md:p-10 transition-all duration-300 hover:-translate-y-1" style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02))", border: "1px solid rgba(39,106,145,0.25)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", boxShadow: "0 8px 32px rgba(0,0,0,0.2)" }}>
+                <div className="absolute top-0 left-0 w-full h-1 rounded-t-2xl" style={{ background: "linear-gradient(to right, #276a91, transparent)" }} />
+                <div className="flex items-center gap-4 mb-6">
+                  <img src="/assets/everceutical-logo.png" alt="EverCeutical" className="h-8 sm:h-10" />
                 </div>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {t.network.globalPlatforms.map((p: string, i: number) => (
-                    <span key={i} className="rounded-full px-3 py-1 text-[0.72rem] font-semibold" style={{ backgroundColor: "rgba(53,184,176,0.1)", color: "#35b8b0" }}>{p}</span>
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-[0.72rem] font-bold tracking-[0.14em] uppercase" style={{ color: "#276a91" }}>EverCeutical</span>
+                  <span className="h-px flex-1" style={{ background: "linear-gradient(to right, rgba(39,106,145,0.4), transparent)" }} />
+                </div>
+                <div className="space-y-3">
+                  {["Global Marketing & Distribution", "Commercialization Strategy", "Market Expansion Worldwide"].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <div className="flex h-7 w-7 items-center justify-center rounded-full" style={{ background: "linear-gradient(135deg, rgba(39,106,145,0.25), rgba(39,106,145,0.1))" }}>
+                        <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="#276a91" strokeWidth="3"><path d="M20 6L9 17l-5-5" /></svg>
+                      </div>
+                      <span className="text-[0.95rem]" style={{ color: "rgba(255,255,255,0.8)" }}>{item}</span>
+                    </div>
                   ))}
                 </div>
-                <a href={t.network.globalUrl} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 text-[0.85rem] font-semibold" style={{ color: "#35b8b0" }}>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          {/* Selected Platforms */}
+          <ScrollReveal>
+            <div className="mt-12 rounded-2xl p-8 md:p-10" style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02))", border: "1px solid rgba(255,255,255,0.08)" }}>
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div>
+                  <span className="text-[0.68rem] font-bold tracking-[0.18em] uppercase" style={{ color: "#35b8b0" }}>{t.network.globalTag}</span>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {t.network.globalPlatforms.map((p: string, i: number) => (
+                      <span key={i} className="rounded-full px-4 py-1.5 text-[0.75rem] font-semibold" style={{ background: "linear-gradient(135deg, rgba(53,184,176,0.15), rgba(53,184,176,0.05))", border: "1px solid rgba(53,184,176,0.25)", color: "#35b8b0" }}>{p}</span>
+                    ))}
+                  </div>
+                </div>
+                <a href={t.network.globalUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 rounded-full px-7 py-3.5 text-[0.8rem] font-semibold tracking-[0.14em] uppercase transition-all duration-300 hover:shadow-lg shrink-0" style={{ background: "linear-gradient(135deg, #35b8b0, #2a9d96)", color: "#05231f" }}>
                   {t.network.globalCta}
                   <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17 17 7M7 7h10v10" /></svg>
                 </a>
               </div>
-            </ScrollReveal>
-          </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
