@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useI18n } from "@/i18n/context";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEOHead from "@/components/SEOHead";
-import { Atom, Layers, FileText, Globe, Microscope, FlaskConical, Shield, Clock, Box, Truck } from "lucide-react";
+import { Atom, Layers, FileText, Globe, Microscope, Dna, FlaskConical, Shield, ClipboardCheck, Clock, Box, Truck, Scan, PackageCheck, Warehouse, Send } from "lucide-react";
 
 export default function HomePage() {
   const { t } = useI18n();
@@ -134,10 +134,10 @@ export default function HomePage() {
                 <Link href={card.href} className="block h-full group">
                   <div className="relative h-full rounded-2xl p-8 transition-all duration-500 hover:-translate-y-2" style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.6))", border: "1px solid rgba(221,229,236,0.8)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", boxShadow: "0 8px 32px rgba(11,31,51,0.08)" }}>
                     <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl" style={{ background: "linear-gradient(135deg, rgba(53,184,176,0.15), rgba(53,184,176,0.05))", border: "1px solid rgba(53,184,176,0.2)" }}>
-                      {i === 0 && <Atom className="h-7 w-7" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
-                      {i === 1 && <Layers className="h-7 w-7" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
-                      {i === 2 && <FileText className="h-7 w-7" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
-                      {i === 3 && <Globe className="h-7 w-7" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
+                      {i === 0 && <Microscope className="h-7 w-7" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
+                      {i === 1 && <Dna className="h-7 w-7" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
+                      {i === 2 && <FlaskConical className="h-7 w-7" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
+                      {i === 3 && <Atom className="h-7 w-7" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
                     </div>
                     <span className="text-[0.72rem] font-bold tracking-[0.18em]" style={{ color: "#35b8b0" }}>{card.num}</span>
                     <h3 className="mt-3 text-[1.15rem] font-semibold" style={{ color: "#0b1f33" }}>{card.title}</h3>
@@ -287,11 +287,12 @@ export default function HomePage() {
                   <div key={i} className="group rounded-xl p-5 transition-all duration-300 hover:-translate-y-1" style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.6))", border: "1px solid rgba(221,229,236,0.8)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", boxShadow: "0 4px 20px rgba(11,31,51,0.06)" }}>
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg" style={{ background: "linear-gradient(135deg, rgba(53,184,176,0.15), rgba(53,184,176,0.05))", border: "1px solid rgba(53,184,176,0.2)" }}>
                       {i === 0 && <Box className="h-5 w-5" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
-                      {i === 1 && <Shield className="h-5 w-5" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
-                      {i === 2 && <FileText className="h-5 w-5" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
-                      {i === 3 && <Clock className="h-5 w-5" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
-                      {i === 4 && <FlaskConical className="h-5 w-5" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
-                      {i === 5 && <Truck className="h-5 w-5" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
+                      {i === 1 && <Scan className="h-5 w-5" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
+                      {i === 2 && <ClipboardCheck className="h-5 w-5" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
+                      {i === 3 && <Shield className="h-5 w-5" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
+                      {i === 4 && <PackageCheck className="h-5 w-5" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
+                      {i === 5 && <Warehouse className="h-5 w-5" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
+                      {i === 6 && <Send className="h-5 w-5" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
                     </div>
                     <span className="mt-3 block text-[0.68rem] font-bold tracking-[0.14em]" style={{ color: "#35b8b0" }}>{item.num}</span>
                     <h4 className="mt-1 text-[0.88rem] font-semibold" style={{ color: "#0b1f33" }}>{item.title}</h4>
