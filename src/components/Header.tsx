@@ -38,7 +38,6 @@ export default function Header() {
       { href: "/about", label: t.nav.about },
       { href: "/about/mission", label: t.nav.mission },
       { href: "/about/network", label: t.nav.network },
-      { href: "/quality", label: t.nav.quality },
     ]},
     { href: "/technology", label: t.nav.technology, items: [
       { href: "/technology/exosome", label: t.nav.exosomeTech },
@@ -88,7 +87,6 @@ export default function Header() {
             { href: "/about", label: t.nav.about },
             { href: "/about/mission", label: t.nav.mission },
             { href: "/about/network", label: t.nav.network },
-            { href: "/quality", label: t.nav.quality },
           ]} />
           <NavLink href="/technology" label={t.nav.technology} items={[
             { href: "/technology/exosome", label: t.nav.exosomeTech, desc: t.nav.exosomeDesc },

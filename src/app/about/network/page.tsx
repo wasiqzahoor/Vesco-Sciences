@@ -139,7 +139,7 @@ export default function NetworkPage() {
           <div className="mt-16 grid gap-6 lg:grid-cols-2 lg:gap-8">
             {/* Vesco Science Card */}
             <ScrollReveal>
-              <div className="relative rounded-2xl p-8 md:p-10 transition-all duration-300 hover:-translate-y-1" style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02))", border: "1px solid rgba(53,184,176,0.2)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", boxShadow: "0 8px 32px rgba(0,0,0,0.2)" }}>
+              <div className="relative rounded-2xl p-8 md:p-10 transition-all duration-300 hover:-translate-y-1" style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85))", border: "1px solid rgba(221,229,236,0.8)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", boxShadow: "0 8px 32px rgba(11,31,51,0.08)" }}>
                 <div className="absolute top-0 left-0 w-full h-1 rounded-t-2xl" style={{ background: "linear-gradient(to right, #35b8b0, transparent)" }} />
                 <div className="flex items-center gap-4 mb-6">
                   <img src="/assets/vesco_logo-KfffcaeC.png" alt="Vesco Science" className="h-10 sm:h-12" />
@@ -151,10 +151,10 @@ export default function NetworkPage() {
                 <div className="space-y-3">
                   {["Research & Development", "Advanced Technology Platforms", "Controlled Manufacturing"].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
-                      <div className="flex h-7 w-7 items-center justify-center rounded-full" style={{ background: "linear-gradient(135deg, rgba(53,184,176,0.25), rgba(53,184,176,0.1))" }}>
+                      <div className="flex h-7 w-7 items-center justify-center rounded-full" style={{ background: "linear-gradient(135deg, rgba(53,184,176,0.2), rgba(53,184,176,0.08))" }}>
                         <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="#35b8b0" strokeWidth="3"><path d="M20 6L9 17l-5-5" /></svg>
                       </div>
-                      <span className="text-[0.95rem]" style={{ color: "rgba(255,255,255,0.8)" }}>{item}</span>
+                      <span className="text-[0.95rem]" style={{ color: "#0b1f33" }}>{item}</span>
                     </div>
                   ))}
                 </div>
@@ -163,7 +163,7 @@ export default function NetworkPage() {
 
             {/* EverCeutical Card */}
             <ScrollReveal>
-              <div className="relative rounded-2xl p-8 md:p-10 transition-all duration-300 hover:-translate-y-1" style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02))", border: "1px solid rgba(39,106,145,0.25)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", boxShadow: "0 8px 32px rgba(0,0,0,0.2)" }}>
+              <div className="relative rounded-2xl p-8 md:p-10 transition-all duration-300 hover:-translate-y-1" style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85))", border: "1px solid rgba(221,229,236,0.8)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", boxShadow: "0 8px 32px rgba(11,31,51,0.08)" }}>
                 <div className="absolute top-0 left-0 w-full h-1 rounded-t-2xl" style={{ background: "linear-gradient(to right, #276a91, transparent)" }} />
                 <div className="flex items-center gap-4 mb-6">
                   <img src="/assets/everceutical-logo.png" alt="EverCeutical" className="h-8 sm:h-10" />
@@ -175,10 +175,10 @@ export default function NetworkPage() {
                 <div className="space-y-3">
                   {["Global Marketing & Distribution", "Commercialization Strategy", "Market Expansion Worldwide"].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
-                      <div className="flex h-7 w-7 items-center justify-center rounded-full" style={{ background: "linear-gradient(135deg, rgba(39,106,145,0.25), rgba(39,106,145,0.1))" }}>
+                      <div className="flex h-7 w-7 items-center justify-center rounded-full" style={{ background: "linear-gradient(135deg, rgba(39,106,145,0.2), rgba(39,106,145,0.08))" }}>
                         <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="#276a91" strokeWidth="3"><path d="M20 6L9 17l-5-5" /></svg>
                       </div>
-                      <span className="text-[0.95rem]" style={{ color: "rgba(255,255,255,0.8)" }}>{item}</span>
+                      <span className="text-[0.95rem]" style={{ color: "#0b1f33" }}>{item}</span>
                     </div>
                   ))}
                 </div>
