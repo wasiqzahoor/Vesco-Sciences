@@ -1,11 +1,13 @@
 "use client";
 
+import { useForm, ValidationError } from "@formspree/react";
 import { useI18n } from "@/i18n/context";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEOHead from "@/components/SEOHead";
 
 export default function ContactPage() {
   const { t } = useI18n();
+  const [state, handleSubmit] = useForm("xeaolbje");
   return (
     <>
       <SEOHead
@@ -27,24 +29,36 @@ export default function ContactPage() {
         <div className="w-full max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
             <ScrollReveal>
-              <form className="space-y-4 md:space-y-6">
+              {state.succeeded ? (
+                <div className="border rounded-xl md:rounded-[14px] p-8 md:p-10 text-center" style={{ backgroundColor: "var(--card-bg)", borderColor: "var(--hairline)" }}>
+                  <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full text-2xl font-bold" style={{ backgroundColor: "var(--teal)", color: "#fff" }}>✓</span>
+                  <h3 className="font-display font-bold text-lg md:text-xl mt-5">{t.contact.sentTitle}</h3>
+                  <p className="mt-3 text-[0.85rem] md:text-[0.9rem] leading-relaxed" style={{ color: "var(--muted)" }}>{t.contact.sentDesc}</p>
+                </div>
+              ) : (
+              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                 {[
-                  { label: t.contact.name, type: "text" },
-                  { label: t.contact.email, type: "email" },
-                  { label: t.contact.company, type: "text" },
-                  { label: t.contact.subject, type: "text" },
+                  { label: t.contact.name, type: "text", name: "name" },
+                  { label: t.contact.email, type: "email", name: "email" },
+                  { label: t.contact.company, type: "text", name: "company" },
+                  { label: t.contact.subject, type: "text", name: "subject" },
                 ].map((field, i) => (
                   <div key={i}>
-                    <label className="block text-[0.78rem] md:text-[0.82rem] font-semibold mb-1.5 md:mb-2">{field.label}</label>
-                    <input type={field.type} className="w-full px-3 md:px-4 py-2.5 md:py-3 border rounded-lg text-[0.85rem] md:text-[0.9rem] focus:outline-none transition-colors" style={{ borderColor: "var(--hairline)" }} />
+                    <label htmlFor={field.name} className="block text-[0.78rem] md:text-[0.82rem] font-semibold mb-1.5 md:mb-2">{field.label}</label>
+                    <input id={field.name} type={field.type} name={field.name} required={field.name === "name" || field.name === "email"} className="w-full px-3 md:px-4 py-2.5 md:py-3 border rounded-lg text-[0.85rem] md:text-[0.9rem] focus:outline-none transition-colors" style={{ borderColor: "var(--hairline)" }} />
+                    {(field.name === "email") && (
+                      <ValidationError prefix={field.label} field={field.name} errors={state.errors} className="mt-1 block text-[0.75rem]" style={{ color: "#dc2626" }} />
+                    )}
                   </div>
                 ))}
                 <div>
-                  <label className="block text-[0.78rem] md:text-[0.82rem] font-semibold mb-1.5 md:mb-2">{t.contact.message}</label>
-                  <textarea rows={5} className="w-full px-3 md:px-4 py-2.5 md:py-3 border rounded-lg text-[0.85rem] md:text-[0.9rem] focus:outline-none transition-colors resize-none" style={{ borderColor: "var(--hairline)" }} />
+                  <label htmlFor="message" className="block text-[0.78rem] md:text-[0.82rem] font-semibold mb-1.5 md:mb-2">{t.contact.message}</label>
+                  <textarea id="message" name="message" required rows={5} className="w-full px-3 md:px-4 py-2.5 md:py-3 border rounded-lg text-[0.85rem] md:text-[0.9rem] focus:outline-none transition-colors resize-none" style={{ borderColor: "var(--hairline)" }} />
+                  <ValidationError prefix={t.contact.message} field="message" errors={state.errors} className="mt-1 block text-[0.75rem]" style={{ color: "#dc2626" }} />
                 </div>
-                <button type="submit" className="text-white px-6 md:px-8 py-3 md:py-3.5 rounded-lg md:rounded-[10px] text-sm md:text-[0.9rem] font-semibold transition-all" style={{ backgroundColor: "var(--teal)" }}>{t.contact.submit}</button>
+                <button type="submit" disabled={state.submitting} className="text-white px-6 md:px-8 py-3 md:py-3.5 rounded-lg md:rounded-[10px] text-sm md:text-[0.9rem] font-semibold transition-all disabled:opacity-60" style={{ backgroundColor: "var(--teal)" }}>{state.submitting ? t.contact.sending : t.contact.submit}</button>
               </form>
+              )}
             </ScrollReveal>
             <ScrollReveal>
               <div className="border rounded-xl md:rounded-[14px] p-6 md:p-8" style={{ backgroundColor: "var(--card-bg)", borderColor: "var(--hairline)" }}>

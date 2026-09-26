@@ -4810,6 +4810,9 @@
     "subject": "Subject",
     "message": "Message",
     "submit": "Send Inquiry",
+    "sending": "Sending...",
+    "sentTitle": "Inquiry Sent",
+    "sentDesc": "Thank you for contacting us. Our team will get back to you soon.",
     "info": {
       "title": "Contact Information",
       "address": "Republic of Korea",

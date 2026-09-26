@@ -3291,6 +3291,9 @@
     "subject": "제목",
     "message": "메시지",
     "submit": "문의 보내기",
+    "sending": "전송 중...",
+    "sentTitle": "문의가 접수되었습니다",
+    "sentDesc": "연락해 주셔서 감사합니다. 담당 팀이 곧 답변드리겠습니다.",
     "info": {
       "title": "연락처 정보",
       "address": "대한민국",
