@@ -83,17 +83,17 @@ export default function InsightsPage() {
           {/* Article cards */}
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {filteredArticles.map((article: { slug: string; tag: string; title: string; desc: string; image?: string }, i: number) => (
-              <ScrollReveal key={i}>
+              <ScrollReveal key={i} className="h-full">
                 <Link href={`/insights/${article.slug}`} className="card-flat group flex h-full flex-col overflow-hidden">
                   {article.image && (
-                    <div className="relative h-48 overflow-hidden">
+                    <div className="relative h-48 shrink-0 overflow-hidden">
                       <img src={`${BASE}/assets/${article.image}`} alt="" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                     </div>
                   )}
                   <div className="flex flex-1 flex-col p-8">
                     <span className="text-[0.7rem] font-semibold tracking-[0.16em] uppercase" style={{ color: "#35b8b0" }}>{article.tag}</span>
-                    <h3 className="mt-5 text-[1.08rem] font-semibold transition-colors" style={{ color: "#0b1f33" }}>{article.title}</h3>
-                    <p className="mt-3 flex-1 text-[0.92rem] leading-relaxed" style={{ color: "#5b6b7a" }}>{article.desc}</p>
+                    <h3 className="mt-5 line-clamp-2 min-h-[3.25rem] text-[1.08rem] leading-snug font-semibold transition-colors" style={{ color: "#0b1f33" }}>{article.title}</h3>
+                    <p className="mt-3 line-clamp-3 min-h-[4.5rem] flex-1 text-[0.92rem] leading-relaxed" style={{ color: "#5b6b7a" }}>{article.desc}</p>
                     <span className="mt-7 inline-flex items-center gap-2 text-[0.8rem] font-semibold tracking-[0.12em] uppercase" style={{ color: "#276a91" }}>
                       <span className="h-px w-6 transition-all duration-500 group-hover:w-10" style={{ backgroundColor: "#35b8b0" }} />
                       READ MORE
