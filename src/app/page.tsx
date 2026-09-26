@@ -24,6 +24,14 @@ export default function HomePage() {
 
   const qualityFlowIcons = [Box, Factory, FlaskConical, ClipboardCheck, Send];
 
+  const statHrefs = [
+    "/research",
+    "/technology/lyophilization",
+    "/technology/exosome",
+    "/technology/formulation",
+    "/technology/custom",
+  ];
+
   return (
     <>
       <SEOHead
@@ -76,12 +84,14 @@ export default function HomePage() {
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
             {t.stats.map((stat, i) => (
               <ScrollReveal key={i} className="h-full">
-                <div className="group relative flex h-full flex-col rounded-xl p-4 text-center transition-all duration-300 hover:-translate-y-1 sm:p-5" style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02))", border: "1px solid rgba(255,255,255,0.1)", backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)" }}>
-                  <div className="mx-auto mb-3 flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-xl" style={{ background: "linear-gradient(135deg, rgba(53,184,176,0.25), rgba(53,184,176,0.08))", border: "1px solid rgba(53,184,176,0.3)" }}>{stat.icon}</div>
-                  <h3 className="text-[0.72rem] font-bold uppercase tracking-[0.1em]" style={{ color: "#fff" }}>{stat.title}</h3>
-                  <div className="mx-auto mt-2 h-px w-6 shrink-0" style={{ background: "linear-gradient(to right, transparent, #35b8b0, transparent)" }} />
-                  <p className="mt-2 flex-1 text-[0.7rem] leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>{stat.desc}</p>
-                </div>
+                <Link href={statHrefs[i % statHrefs.length]} className="block h-full">
+                  <div className="group relative flex h-full flex-col rounded-xl p-4 text-center transition-all duration-300 hover:-translate-y-1 sm:p-5" style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02))", border: "1px solid rgba(255,255,255,0.1)", backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)" }}>
+                    <div className="mx-auto mb-3 flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-xl" style={{ background: "linear-gradient(135deg, rgba(53,184,176,0.25), rgba(53,184,176,0.08))", border: "1px solid rgba(53,184,176,0.3)" }}>{stat.icon}</div>
+                    <h3 className="text-[0.72rem] font-bold uppercase tracking-[0.1em]" style={{ color: "#fff" }}>{stat.title}</h3>
+                    <div className="mx-auto mt-2 h-px w-6 shrink-0" style={{ background: "linear-gradient(to right, transparent, #35b8b0, transparent)" }} />
+                    <p className="mt-2 flex-1 text-[0.7rem] leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>{stat.desc}</p>
+                  </div>
+                </Link>
               </ScrollReveal>
             ))}
           </div>
@@ -297,7 +307,7 @@ export default function HomePage() {
             </ScrollReveal>
             <ScrollReveal className="hidden lg:block">
               <div className="overflow-hidden rounded-[1.75rem]" style={{ boxShadow: "0 25px 60px rgba(11,31,51,0.15)" }}>
-                <img src="/assets/qc-lab-side2.jpg" alt="Quality laboratory" className="aspect-[5/5] w-full object-cover" />
+                <img src="/assets/qc-lab-mOryit6A.jpg" alt="Quality laboratory" className="aspect-[5/5] w-full object-cover" />
               </div>
             </ScrollReveal>
           </div>
