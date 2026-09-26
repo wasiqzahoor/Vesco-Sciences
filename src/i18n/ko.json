@@ -678,6 +678,44 @@
     ],
     "flowLabels": ["원자재", "제조", "시험", "품질 검토", "유통"],
     "flowCta": "품질 시스템 살펴보기",
+    "stageCards": [
+      {
+        "num": "01",
+        "title": "원자재 관리",
+        "desc": "고품질 원자재의 엄격한 평가.",
+        "img": "qc-raw-material.jpg"
+      },
+      {
+        "num": "02",
+        "title": "공정 관리",
+        "desc": "정의되고 모니터링되는 제조 공정.",
+        "img": "qc-process.jpg"
+      },
+      {
+        "num": "03",
+        "title": "분석 시험",
+        "desc": "신뢰할 수 있는 품질 평가를 위한 첨단 분석법.",
+        "img": "qc-analytical.jpg"
+      },
+      {
+        "num": "04",
+        "title": "미생물 시험",
+        "desc": "제품 안전을 위한 미생물학적 평가.",
+        "img": "qc-micro.jpg"
+      },
+      {
+        "num": "05",
+        "title": "배치 추적성",
+        "desc": "모든 배치에 대한 완전한 문서화 및 추적성.",
+        "img": "qc-trace.jpg"
+      },
+      {
+        "num": "06",
+        "title": "보관 및 유통",
+        "desc": "전 세계적으로 관리되는 보관 및 안전한 유통.",
+        "img": "qc-storage.jpg"
+      }
+    ],
     "systemsEyebrow": "품질경영",
     "systemsTitle": "품질 시스템",
     "systems": [

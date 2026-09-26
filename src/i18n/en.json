@@ -678,6 +678,44 @@
     ],
     "flowLabels": ["Raw Materials", "Manufacturing", "Testing", "Quality Review", "Distribution"],
     "flowCta": "Explore Our Quality System",
+    "stageCards": [
+      {
+        "num": "01",
+        "title": "Raw Material Control",
+        "desc": "Controlled evaluation of high-quality raw materials.",
+        "img": "qc-raw-material.jpg"
+      },
+      {
+        "num": "02",
+        "title": "Process Control",
+        "desc": "Defined and monitored manufacturing processes.",
+        "img": "qc-process.jpg"
+      },
+      {
+        "num": "03",
+        "title": "Analytical Testing",
+        "desc": "Advanced analytical methods for reliable quality assessment.",
+        "img": "qc-analytical.jpg"
+      },
+      {
+        "num": "04",
+        "title": "Microbiological Testing",
+        "desc": "Relevant microbiological evaluation for product safety.",
+        "img": "qc-micro.jpg"
+      },
+      {
+        "num": "05",
+        "title": "Batch Traceability",
+        "desc": "Complete documentation and traceability for every batch.",
+        "img": "qc-trace.jpg"
+      },
+      {
+        "num": "06",
+        "title": "Storage & Distribution",
+        "desc": "Controlled storage and secure distribution worldwide.",
+        "img": "qc-storage.jpg"
+      }
+    ],
     "systemsEyebrow": "QUALITY MANAGEMENT",
     "systemsTitle": "Quality systems",
     "systems": [

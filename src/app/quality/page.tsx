@@ -4,11 +4,10 @@ import Link from "next/link";
 import { useI18n } from "@/i18n/context";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEOHead from "@/components/SEOHead";
-import { Box, Factory, Scan, ClipboardCheck, PackageCheck, Warehouse, Send, FlaskConical, ChevronRight, ArrowRight } from "lucide-react";
+import { Box, Factory, FlaskConical, ClipboardCheck, Send, ChevronRight, ArrowRight } from "lucide-react";
 
 const BASE = "";
 
-const stepIcons = [Box, Factory, Scan, ClipboardCheck, PackageCheck, Warehouse, Send];
 const flowIcons = [Box, Factory, FlaskConical, ClipboardCheck, Send];
 
 export default function QualityPage() {
@@ -46,52 +45,49 @@ export default function QualityPage() {
       </header>
 
       {/* ===== QUALITY FROM SOURCE TO SHIPMENT — Light modern (reference design) ===== */}
-      <section className="relative overflow-hidden" style={{ backgroundColor: "#edf3f9" }}>
-        <div className="absolute -top-24 right-1/4 h-[360px] w-[360px] rounded-full blur-[140px]" style={{ background: "radial-gradient(circle, rgba(53,184,176,0.12), transparent 70%)" }} />
+      <section className="relative overflow-hidden" style={{ backgroundColor: "#eef4fa" }}>
+        <div className="absolute -top-24 right-1/4 h-[360px] w-[360px] rounded-full blur-[140px]" style={{ background: "radial-gradient(circle, rgba(43,108,176,0.12), transparent 70%)" }} />
         <div className="relative mx-auto w-full max-w-[1240px] px-6 py-20 md:px-10 md:py-28">
-          <div className="grid gap-12 lg:grid-cols-[1fr_360px] lg:items-start">
+          <div className="grid gap-10 lg:grid-cols-[1fr_400px] lg:items-center">
             <ScrollReveal>
               <div>
                 <p className="text-[0.8rem] font-bold tracking-[0.18em] uppercase" style={{ color: "#2b6cb0" }}>{t.quality.sectionEyebrow}</p>
                 <span className="mt-2 block h-[3px] w-12 rounded-full" style={{ backgroundColor: "#2b6cb0" }} />
-                <h2 className="mt-5 max-w-xl text-[clamp(2rem,3.6vw,3rem)] leading-[1.1] font-extrabold" style={{ color: "#0b1f33", letterSpacing: "-0.02em" }}>
+                <h2 className="mt-5 max-w-xl text-[clamp(2.1rem,3.8vw,3.2rem)] leading-[1.08] font-extrabold" style={{ color: "#0b1f33", letterSpacing: "-0.02em" }}>
                   {t.quality.sectionTitle}
                 </h2>
                 <p className="mt-5 max-w-xl text-[1.02rem] leading-relaxed" style={{ color: "#5b6b7a" }}>
                   {t.quality.sectionDesc}
                 </p>
-                <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-                  {t.quality.steps.map((step: { num: string; title: string; desc: string }, i: number) => {
-                    const Icon = stepIcons[i % stepIcons.length];
-                    return (
-                      <div key={i} className="rounded-xl p-6 text-center transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: "#fff", border: "1px solid rgba(221,229,236,0.9)", boxShadow: "0 10px 30px rgba(11,31,51,0.07)" }}>
-                        <p className="text-left text-[0.8rem] font-extrabold" style={{ color: "#2b6cb0" }}>{step.num}</p>
-                        <div className="mx-auto mt-2 flex h-16 w-16 items-center justify-center rounded-full" style={{ backgroundColor: "rgba(43,108,176,0.08)", border: "1px solid rgba(43,108,176,0.15)" }}>
-                          <Icon className="h-7 w-7" style={{ color: "#2b6cb0" }} strokeWidth={1.5} />
-                        </div>
-                        <h3 className="mt-3 text-[0.95rem] font-bold" style={{ color: "#0b1f33" }}>{step.title}</h3>
-                        <p className="mt-1.5 text-[0.78rem] leading-relaxed" style={{ color: "#5b6b7a" }}>{step.desc}</p>
-                      </div>
-                    );
-                  })}
-                </div>
               </div>
             </ScrollReveal>
             <ScrollReveal className="hidden lg:block">
               <div className="overflow-hidden rounded-[1.75rem]" style={{ boxShadow: "0 25px 60px rgba(11,31,51,0.15)" }}>
-                <img src={`${BASE}/assets/korean-scientist-vials-DxqjMGcR.jpg`} alt="Quality laboratory" className="aspect-[4/5] w-full object-cover" />
+                <img src={`${BASE}/assets/qc-lab-side2.jpg`} alt="Quality laboratory" className="aspect-[5/5] w-full object-cover" />
               </div>
             </ScrollReveal>
           </div>
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
+            {t.quality.stageCards.map((card: { num: string; title: string; desc: string; img: string }, i: number) => (
+              <ScrollReveal key={i} className="h-full">
+                <div className="flex h-full flex-col rounded-xl p-5 text-center transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: "#fff", border: "1px solid rgba(221,229,236,0.9)", boxShadow: "0 10px 30px rgba(11,31,51,0.07)" }}>
+                  <p className="text-left text-[0.8rem] font-extrabold" style={{ color: "#2b6cb0" }}>{card.num}</p>
+                  <img src={`${BASE}/assets/${card.img}`} alt={card.title} className="mx-auto mt-2 h-20 w-20 rounded-full object-cover" style={{ border: "2px solid rgba(43,108,176,0.15)" }} />
+                  <h3 className="mt-3 text-[0.92rem] leading-snug font-bold" style={{ color: "#0b1f33" }}>{card.title}</h3>
+                  <p className="mt-1.5 flex-1 text-[0.75rem] leading-relaxed" style={{ color: "#5b6b7a" }}>{card.desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
           <ScrollReveal>
-            <div className="mt-12 flex flex-col items-stretch gap-6 rounded-2xl p-5 sm:p-6 lg:flex-row lg:items-center" style={{ backgroundColor: "rgba(255,255,255,0.7)", border: "1px solid rgba(221,229,236,0.9)" }}>
+            <div className="mt-8 flex flex-col items-stretch gap-6 rounded-2xl p-5 sm:p-6 lg:flex-row lg:items-center" style={{ backgroundColor: "rgba(255,255,255,0.75)", border: "1px solid rgba(221,229,236,0.9)" }}>
               <div className="flex flex-1 flex-wrap items-center gap-x-2 gap-y-4">
                 {t.quality.flowLabels.map((label: string, i: number) => {
                   const FIcon = flowIcons[i % flowIcons.length];
                   return (
                     <span key={i} className="flex items-center gap-2">
                       <span className="flex items-center gap-2.5">
-                        <span className="flex h-11 w-11 items-center justify-center rounded-full" style={{ backgroundColor: "#fff", border: "1px solid rgba(43,108,176,0.2)", boxShadow: "0 4px 14px rgba(11,31,51,0.06)" }}>
+                        <span className="flex h-11 w-11 items-center justify-center" style={{ backgroundColor: "rgba(43,108,176,0.08)", border: "1px solid rgba(43,108,176,0.2)", clipPath: "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)" }}>
                           <FIcon className="h-5 w-5" style={{ color: "#2b6cb0" }} strokeWidth={1.5} />
                         </span>
                         <span className="text-[0.78rem] font-semibold" style={{ color: "#0b1f33" }}>{label}</span>
