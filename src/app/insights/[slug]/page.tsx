@@ -53,18 +53,21 @@ export default function InsightDetailPage() {
           newParts.push(part);
           continue;
         }
-        const idx = part.indexOf(ref.title);
-        if (idx === -1) {
+        const split = part.split(ref.title);
+        if (split.length === 1) {
           newParts.push(part);
           continue;
         }
-        if (idx > 0) newParts.push(part.slice(0, idx));
-        newParts.push(
-          <a key={ref.num + ref.title} href={`https://${ref.url}`} target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2 transition-colors hover:text-teal" style={{ color: "#276a91" }}>
-            {ref.title}
-          </a>
-        );
-        newParts.push(part.slice(idx + ref.title.length));
+        split.forEach((seg, idx) => {
+          if (seg) newParts.push(seg);
+          if (idx < split.length - 1) {
+            newParts.push(
+              <a key={`${ref.num}-${idx}`} href={`https://${ref.url}`} target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2 transition-colors hover:text-teal" style={{ color: "#276a91" }}>
+                {ref.title}
+              </a>
+            );
+          }
+        });
       }
       parts = newParts;
     }
