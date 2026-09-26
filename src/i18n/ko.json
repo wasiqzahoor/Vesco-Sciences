@@ -2782,36 +2782,51 @@
         "image": "blogs-images/blog7.jpg",
         "title": "동결건조 vs 냉동 엑소좀: 핵심 차이점 이해",
         "desc": "두 가지 일반적인 엑소좀 형식 — 동결건조 및 냉동 — 은 가공, 취급, 보관 및 재구성에서 크게 다릅니다.",
-        "body": "Exosomes are nanoscale EVs. Two commonly encountered formats are lyophilized (freeze-dried) and frozen exosomes.\n\nWhat Are Lyophilized Exosomes? — Lyophilization: Freezing → Primary Drying → Secondary Drying → Sealed Dry Storage. Parameters such as freezing rate, drying conditions, excipients, and reconstitution conditions affect particle recovery.\n\nWhat Are Frozen Exosomes? — Maintained in hydrated state under controlled low-temperature. Temperature fluctuations and freeze–thaw cycles should be minimized.\n\nKey Differences — Physical state, water content, storage, transportation, before-use requirements, freeze–thaw concerns, formulation sensitivity, quality assessment differ between formats.\n\nDoes Lyophilization Make Exosomes More Stable? — Not automatically. Protective excipients may be incorporated. Evaluation after reconstitution is essential.\n\nWhich Format Is Better? — No universal winner. Depends on application, formulation, validated storage, transportation, and quality specifications.\n\nQuality Matters More Than Format — Appropriate analytical characterization and controlled manufacturing are essential regardless of format.",
+        "body": "Exosomes are nanoscale extracellular vesicles that participate in intercellular communication by carrying a complex biological cargo, including proteins, lipids, nucleic acids, and signaling molecules. As interest in exosome-based research and advanced biological applications continues to grow, the way exosomes are formulated and stored has become an important consideration.\n\nTwo commonly encountered formats are lyophilized (freeze-dried) and frozen exosomes. While both approaches are designed to maintain exosome quality during storage, they differ significantly in processing, handling, transportation, and reconstitution requirements.\n\nUnderstanding these differences helps researchers, laboratories, and biotechnology professionals select the most appropriate format for their specific workflow.\n\n## What Are Lyophilized Exosomes?\nLyophilization, commonly known as freeze-drying, is a controlled dehydration process in which a biological preparation is frozen and then subjected to reduced pressure to remove water through sublimation.\n\nFor exosome preparations, the process generally involves:\nFreezing → Primary Drying → Secondary Drying → Sealed Dry Storage\n\nThe objective is to reduce water activity while maintaining important characteristics of the extracellular vesicle preparation.\n\nA properly developed lyophilization process may provide advantages in storage convenience, transportation, and formulation stability, particularly when a product is designed for handling without continuous frozen conditions.\n\nHowever, lyophilization is not simply a matter of removing water. Exosomes are structurally delicate biological nanoparticles, and the formulation must be carefully optimized. Parameters such as freezing rate, drying conditions, excipients, residual moisture, and reconstitution conditions can influence particle recovery and biological properties.\n\n## What Are Frozen Exosomes?\nFrozen exosome preparations are maintained in a hydrated state under controlled low-temperature conditions. Depending on the formulation and manufacturer, storage may require temperatures such as −20°C or lower.\n\nThe primary advantage of the frozen format is that the exosomes remain in a liquid formulation without undergoing the dehydration and reconstitution steps associated with lyophilization.\n\nFor research applications, maintaining a controlled frozen environment can help preserve the physical and biochemical characteristics of an exosome preparation. Nevertheless, temperature fluctuations and repeated freeze–thaw cycles should be minimized, as they can potentially affect vesicle integrity, aggregation, particle recovery, and cargo stability.\n\nTherefore, cold-chain management is an important part of frozen exosome handling.\n\n## Lyophilized vs. Frozen Exosomes: Key Differences\n\nFeature\nLyophilized Exosomes\nFrozen Exosomes\nPhysical state\nDry powder / dehydrated preparation\nLiquid suspension\nWater content\nSignificantly reduced\nMaintained\nStorage\nDesigned for dry, controlled storage depending on formulation\nRequires controlled frozen conditions\nTransportation\nCan simplify logistics when validated for the specified conditions\nRequires appropriate cold-chain management\nBefore use\nRequires reconstitution\nGenerally ready after controlled thawing\nFreeze–thaw concern\nReconstitution-related stress must be controlled\nRepeated freeze–thaw cycles should be avoided\nFormulation sensitivity\nHighly dependent on cryo/lyoprotectants and drying process\nDependent on freezing temperature and formulation\nQuality assessment\nShould include post-reconstitution characterization\nShould include characterization after storage/thawing\n\nThe most important point is that format alone does not determine exosome quality. A high-quality exosome preparation requires appropriate manufacturing controls and analytical characterization regardless of whether it is supplied frozen or lyophilized.\n\n## Does Lyophilization Make Exosomes More Stable?\nNot automatically.\n\nLyophilization can offer significant logistical advantages, but the process itself introduces physical stresses that may affect extracellular vesicles. Protective excipients may be incorporated to reduce damage during freezing and drying.\n\nA scientifically validated lyophilized formulation should therefore be evaluated after reconstitution for parameters such as:\nParticle concentration and recovery\nParticle-size distribution\nVesicle morphology\nAggregation\nRelevant exosome-associated markers\nProtein and cargo integrity\nFunctional or biological activity, where applicable\n\nSimilarly, frozen preparations should be evaluated following storage and thawing to confirm that the intended quality attributes remain within specification.\n\n## Which Format Is Better?\nThere is no universal winner between lyophilized and frozen exosomes. The appropriate format depends on the intended application, formulation, validated storage conditions, transportation requirements, and quality specifications.\n\nLyophilized format may be advantageous when:\nSimplified storage logistics are important\nTransportation without continuous deep-freeze conditions is desired\nA dry, reconstitutable formulation fits the workflow\nThe formulation has been specifically validated for long-term stability\n\nFrozen format may be advantageous when:\nA ready-to-use liquid preparation is preferred\nMaintaining the preparation in a hydrated state is desirable\nEstablished cold-chain infrastructure is available\nThe product has validated frozen-storage stability\n\n## Quality Matters More Than Format\nFor researchers and biotechnology professionals, the critical question should not simply be “lyophilized or frozen?” but rather:\n\nHow well does the manufacturing and storage process preserve the defined quality attributes of the exosome preparation?\n\nReliable exosome products should be supported by appropriate analytical characterization, controlled manufacturing processes, and clearly defined storage and handling conditions.\n\nAt Vesco Science, the development of extracellular vesicle technologies requires attention to the relationship between manufacturing process, formulation, storage conditions, and measurable quality attributes. This approach helps ensure that exosome preparations are characterized scientifically rather than evaluated solely by their physical format.",
         "references": [
           {
             "num": 1,
-            "title": "lyophilization / freeze-drying",
+            "title": "lyophilization",
             "url": "pubmed.ncbi.nlm.nih.gov/34310074/"
           },
           {
             "num": 2,
+            "title": "freeze-drying",
+            "url": "pubmed.ncbi.nlm.nih.gov/34310074/"
+          },
+          {
+            "num": 3,
             "title": "freeze–thaw cycles",
             "url": "pubmed.ncbi.nlm.nih.gov/39593194/"
           },
           {
-            "num": 3,
+            "num": 4,
             "title": "storage stability",
             "url": "pubmed.ncbi.nlm.nih.gov/34259095/"
           },
           {
-            "num": 4,
+            "num": 5,
             "title": "trehalose / cryoprotectants",
             "url": "pubmed.ncbi.nlm.nih.gov/30316791/"
           },
           {
-            "num": 5,
-            "title": "particle-size distribution & morphology",
+            "num": 6,
+            "title": "particle-size distribution",
             "url": "pubmed.ncbi.nlm.nih.gov/35102719/"
           },
           {
-            "num": 6,
-            "title": "NTA / electron microscopy",
+            "num": 7,
+            "title": "morphology",
+            "url": "pubmed.ncbi.nlm.nih.gov/35102719/"
+          },
+          {
+            "num": 8,
+            "title": "NTA",
+            "url": "pubmed.ncbi.nlm.nih.gov/26563735/"
+          },
+          {
+            "num": 9,
+            "title": "electron microscopy",
             "url": "pubmed.ncbi.nlm.nih.gov/26563735/"
           }
         ],

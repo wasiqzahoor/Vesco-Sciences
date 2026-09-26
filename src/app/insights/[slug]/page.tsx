@@ -48,26 +48,30 @@ export default function InsightDetailPage() {
     let parts: (string | React.JSX.Element)[] = [text];
     for (const ref of refs) {
       const newParts: (string | React.JSX.Element)[] = [];
+      const esc = ref.title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const re = new RegExp(`(?<![A-Za-z0-9])(${esc})(?![A-Za-z0-9])`, "gi");
+      let keySeed = 0;
       for (const part of parts) {
         if (typeof part !== "string") {
           newParts.push(part);
           continue;
         }
-        const split = part.split(ref.title);
-        if (split.length === 1) {
+        const chunks = part.split(re);
+        if (chunks.length === 1) {
           newParts.push(part);
           continue;
         }
-        split.forEach((seg, idx) => {
-          if (seg) newParts.push(seg);
-          if (idx < split.length - 1) {
+        for (let k = 0; k < chunks.length; k++) {
+          if (k % 2 === 1) {
             newParts.push(
-              <a key={`${ref.num}-${idx}`} href={`https://${ref.url}`} target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2 transition-colors hover:text-teal" style={{ color: "#276a91" }}>
-                {ref.title}
+              <a key={`${ref.num}-${keySeed++}`} href={`https://${ref.url}`} target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2 transition-colors hover:text-teal" style={{ color: "#276a91" }}>
+                {chunks[k]}
               </a>
             );
+          } else if (chunks[k]) {
+            newParts.push(chunks[k]);
           }
-        });
+        }
       }
       parts = newParts;
     }
@@ -123,6 +127,48 @@ export default function InsightDetailPage() {
                   <img src={`${BASE}/assets/${article.image || "molecular-CIuWq-Al.jpg"}`} alt={article.title} className="aspect-[16/8] w-full object-cover" />
                 </div>
                 {paragraphs.map((p: string, i: number) => {
+                  if (p === "Feature" || p.startsWith("Feature\n")) {
+                    const lines = p.split("\n").filter(Boolean);
+                    const header = lines.slice(0, 3);
+                    const rows: string[][] = [];
+                    for (let r = 3; r < lines.length; r += 3) rows.push(lines.slice(r, r + 3));
+                    return (
+                      <div key={i} className="mt-8 overflow-x-auto rounded-xl" style={{ border: "1px solid #dde5ec", backgroundColor: "#fff" }}>
+                        <table className="w-full min-w-[560px] border-collapse text-left">
+                          <thead>
+                            <tr style={{ backgroundColor: "#0b1f33" }}>
+                              {header.map((h, j) => (
+                                <th key={j} className="px-5 py-4 text-[0.8rem] font-bold tracking-[0.06em] uppercase" style={{ color: "#fff" }}>{h}</th>
+                              ))}
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {rows.map((row, r) => (
+                              <tr key={r} style={{ backgroundColor: r % 2 === 1 ? "#f7fafc" : "#fff", borderTop: "1px solid #dde5ec" }}>
+                                {row.map((cell, c) => (
+                                  <td key={c} className="px-5 py-3.5 text-[0.85rem] leading-relaxed" style={{ color: c === 0 ? "#0b1f33" : "#5b6b7a", fontWeight: c === 0 ? 700 : 400 }}>{renderInlineRefs(cell, article.references || [])}</td>
+                                ))}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    );
+                  }
+                  if (p.startsWith("## ")) {
+                    const content = p.slice(3);
+                    const nl = content.indexOf("\n");
+                    const heading = nl === -1 ? content : content.slice(0, nl);
+                    const rest = nl === -1 ? [] : content.slice(nl + 1).split("\n").filter((l) => l.trim() !== "");
+                    return (
+                      <div key={i} className="mt-10">
+                        <h3 className="text-[1.15rem] font-semibold" style={{ color: "#0b1f33" }}>{renderInlineRefs(heading, article.references || [])}</h3>
+                        {rest.map((line, j) => (
+                          <p key={j} className="mt-3 text-[0.95rem] leading-relaxed" style={{ color: "#5b6b7a" }}>{renderInlineRefs(line, article.references || [])}</p>
+                        ))}
+                      </div>
+                    );
+                  }
                   if (p.startsWith("1.") || p.startsWith("2.") || p.startsWith("3.") || p.startsWith("4.") || p.startsWith("5.") || p.startsWith("6.") || p.startsWith("7.") || p.startsWith("8.") || p.startsWith("9.")) {
                     const parts = p.split("\n").filter(Boolean);
                     const heading = parts[0];
@@ -136,6 +182,23 @@ export default function InsightDetailPage() {
                   }
                   if (p.includes("\n")) {
                     const lines = p.split("\n");
+                    const lead = lines[0].trim();
+                    const restLines = lines.slice(1).filter((l) => l.trim() !== "");
+                    if (lead.endsWith(":") && restLines.length > 0) {
+                      return (
+                        <div key={i} className="mt-6">
+                          <p className="text-[0.95rem] leading-relaxed" style={{ color: "#5b6b7a" }}>{renderInlineRefs(lines[0], article.references || [])}</p>
+                          <ul className="mt-3 space-y-2">
+                            {restLines.map((line, j) => (
+                              <li key={j} className="flex items-start gap-2.5 text-[0.95rem] leading-relaxed" style={{ color: "#5b6b7a" }}>
+                                <span className="mt-[9px] block h-1.5 w-1.5 shrink-0 rounded-full" style={{ backgroundColor: "#35b8b0" }} />
+                                <span>{renderInlineRefs(line.trim(), article.references || [])}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      );
+                    }
                     return (
                       <div key={i} className="mt-6">
                         {lines.map((line: string, j: number) => (
