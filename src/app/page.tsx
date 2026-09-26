@@ -60,12 +60,12 @@ export default function HomePage() {
         <div className="relative mx-auto w-full max-w-[1240px] px-6 py-12 md:px-10">
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
             {t.stats.map((stat, i) => (
-              <ScrollReveal key={i}>
-                <div className="group relative rounded-xl p-5 text-center transition-all duration-300 hover:-translate-y-1" style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02))", border: "1px solid rgba(255,255,255,0.1)", backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)" }}>
-                  <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full text-xl" style={{ background: "linear-gradient(135deg, rgba(53,184,176,0.25), rgba(53,184,176,0.08))", border: "1px solid rgba(53,184,176,0.3)" }}>{stat.icon}</div>
+              <ScrollReveal key={i} className="h-full">
+                <div className="group relative flex h-full flex-col rounded-xl p-4 text-center transition-all duration-300 hover:-translate-y-1 sm:p-5" style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02))", border: "1px solid rgba(255,255,255,0.1)", backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)" }}>
+                  <div className="mx-auto mb-3 flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-xl" style={{ background: "linear-gradient(135deg, rgba(53,184,176,0.25), rgba(53,184,176,0.08))", border: "1px solid rgba(53,184,176,0.3)" }}>{stat.icon}</div>
                   <h3 className="text-[0.72rem] font-bold uppercase tracking-[0.1em]" style={{ color: "#fff" }}>{stat.title}</h3>
-                  <div className="mx-auto mt-2 h-px w-6" style={{ background: "linear-gradient(to right, transparent, #35b8b0, transparent)" }} />
-                  <p className="mt-2 text-[0.7rem] leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>{stat.desc}</p>
+                  <div className="mx-auto mt-2 h-px w-6 shrink-0" style={{ background: "linear-gradient(to right, transparent, #35b8b0, transparent)" }} />
+                  <p className="mt-2 flex-1 text-[0.7rem] leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>{stat.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
