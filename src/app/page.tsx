@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useI18n } from "@/i18n/context";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEOHead from "@/components/SEOHead";
-import { Atom, Layers, FileText, Globe, Microscope, Dna, FlaskConical, Shield, ShieldCheck, ClipboardCheck, Clock, Box, Truck, Scan, PackageCheck, Warehouse, Send, Target, Factory, ArrowDown } from "lucide-react";
+import { Atom, Layers, FileText, Globe, Microscope, Dna, FlaskConical, ShieldCheck, ClipboardCheck, Clock, Box, Truck, Send, Target, Factory, ArrowDown, ChevronRight, ArrowRight } from "lucide-react";
 
 export default function HomePage() {
   const { t } = useI18n();
@@ -21,6 +21,8 @@ export default function HomePage() {
     "/assets/facility-wide-shot-DX9sQqs2.jpg",
     "/assets/seoul-biotech-campus-D3ksiCpk.jpg",
   ];
+
+  const qualityFlowIcons = [Box, Factory, FlaskConical, ClipboardCheck, Send];
 
   return (
     <>
@@ -276,45 +278,67 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== 07. QUALITY — Glass grid with icon cards ===== */}
-      <section className="relative overflow-hidden" style={{ backgroundColor: "#fff" }}>
-        <div className="absolute top-1/2 right-0 h-[500px] w-[500px] rounded-full blur-[180px]" style={{ background: "radial-gradient(circle, rgba(53,184,176,0.06), transparent 70%)" }} />
+      {/* ===== 07. QUALITY — Light modern (reference design) ===== */}
+      <section className="relative overflow-hidden" style={{ backgroundColor: "#eef4fa" }}>
+        <div className="absolute -top-24 right-1/4 h-[360px] w-[360px] rounded-full blur-[140px]" style={{ background: "radial-gradient(circle, rgba(43,108,176,0.12), transparent 70%)" }} />
         <div className="relative mx-auto w-full max-w-[1240px] px-6 py-24 md:px-10 md:py-32">
-          <div className="grid gap-16 lg:grid-cols-[1fr_1.1fr] lg:items-start">
+          <div className="grid gap-10 lg:grid-cols-[1fr_400px] lg:items-center">
             <ScrollReveal>
               <div>
-                <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5" style={{ background: "linear-gradient(135deg, rgba(39,106,145,0.12), rgba(39,106,145,0.04))", border: "1px solid rgba(39,106,145,0.2)" }}>
-                  <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#276a91" }} />
-                  <span className="text-[0.68rem] font-bold tracking-[0.14em] uppercase" style={{ color: "#276a91" }}>{t.quality.sectionEyebrow}</span>
-                </div>
-                <h2 className="mt-6 text-[clamp(1.75rem,3.4vw,2.85rem)] leading-[1.12] font-semibold" style={{ color: "#0b1f33", letterSpacing: "-0.025em" }}>{t.quality.sectionTitle}</h2>
-                <p className="mt-5 text-[1.0625rem] leading-relaxed" style={{ color: "#5b6b7a" }}>{t.quality.heroSubtitle}</p>
-                <Link href="/quality" className="mt-8 inline-flex items-center gap-3 rounded-full px-7 py-3.5 text-[0.8rem] font-semibold tracking-[0.14em] uppercase transition-all duration-300 hover:shadow-lg" style={{ background: "linear-gradient(135deg, #0b1f33, #173352)", color: "#fff" }}>
+                <p className="text-[0.8rem] font-bold tracking-[0.18em] uppercase" style={{ color: "#2b6cb0" }}>{t.quality.sectionEyebrow}</p>
+                <span className="mt-2 block h-[3px] w-12 rounded-full" style={{ backgroundColor: "#2b6cb0" }} />
+                <h2 className="mt-5 max-w-xl text-[clamp(2.1rem,3.8vw,3.2rem)] leading-[1.08] font-extrabold" style={{ color: "#0b1f33", letterSpacing: "-0.02em" }}>
                   {t.quality.sectionTitle}
-                  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m9 18 6-6-6-6" /></svg>
-                </Link>
+                </h2>
+                <p className="mt-5 max-w-xl text-[1.02rem] leading-relaxed" style={{ color: "#5b6b7a" }}>
+                  {t.quality.heroSubtitle}
+                </p>
               </div>
             </ScrollReveal>
-            <ScrollReveal>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {t.quality.steps.map((item: { num: string; title: string }, i: number) => (
-                  <div key={i} className="group rounded-xl p-5 transition-all duration-300 hover:-translate-y-1" style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.6))", border: "1px solid rgba(221,229,236,0.8)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", boxShadow: "0 4px 20px rgba(11,31,51,0.06)" }}>
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg" style={{ background: "linear-gradient(135deg, rgba(53,184,176,0.15), rgba(53,184,176,0.05))", border: "1px solid rgba(53,184,176,0.2)" }}>
-                      {i === 0 && <Box className="h-5 w-5" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
-                      {i === 1 && <Scan className="h-5 w-5" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
-                      {i === 2 && <ClipboardCheck className="h-5 w-5" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
-                      {i === 3 && <Shield className="h-5 w-5" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
-                      {i === 4 && <PackageCheck className="h-5 w-5" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
-                      {i === 5 && <Warehouse className="h-5 w-5" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
-                      {i === 6 && <Send className="h-5 w-5" style={{ color: "#35b8b0" }} strokeWidth={1.5} />}
-                    </div>
-                    <span className="mt-3 block text-[0.68rem] font-bold tracking-[0.14em]" style={{ color: "#35b8b0" }}>{item.num}</span>
-                    <h4 className="mt-1 text-[0.88rem] font-semibold" style={{ color: "#0b1f33" }}>{item.title}</h4>
-                  </div>
-                ))}
+            <ScrollReveal className="hidden lg:block">
+              <div className="overflow-hidden rounded-[1.75rem]" style={{ boxShadow: "0 25px 60px rgba(11,31,51,0.15)" }}>
+                <img src="/assets/qc-lab-side2.jpg" alt="Quality laboratory" className="aspect-[5/5] w-full object-cover" />
               </div>
             </ScrollReveal>
           </div>
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
+            {t.quality.stageCards.map((card: { num: string; title: string; desc: string; img: string }, i: number) => (
+              <ScrollReveal key={i} className="h-full">
+                <div className="flex h-full flex-col rounded-xl p-5 text-center transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: "#fff", border: "1px solid rgba(221,229,236,0.9)", boxShadow: "0 10px 30px rgba(11,31,51,0.07)" }}>
+                  <p className="text-left text-[0.8rem] font-extrabold" style={{ color: "#2b6cb0" }}>{card.num}</p>
+                  <img src={`/assets/${card.img}`} alt={card.title} className="mx-auto mt-2 h-20 w-20 rounded-full object-cover" style={{ border: "2px solid rgba(43,108,176,0.15)" }} />
+                  <h3 className="mt-3 text-[0.92rem] leading-snug font-bold" style={{ color: "#0b1f33" }}>{card.title}</h3>
+                  <p className="mt-1.5 flex-1 text-[0.75rem] leading-relaxed" style={{ color: "#5b6b7a" }}>{card.desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+          <ScrollReveal>
+            <div className="mt-8 flex flex-col items-stretch gap-6 rounded-2xl p-5 sm:p-6 lg:flex-row lg:items-center" style={{ backgroundColor: "rgba(255,255,255,0.75)", border: "1px solid rgba(221,229,236,0.9)" }}>
+              <div className="flex flex-1 flex-wrap items-center gap-x-2 gap-y-4">
+                {t.quality.flowLabels.map((label: string, i: number) => {
+                  const FIcon = qualityFlowIcons[i % qualityFlowIcons.length];
+                  return (
+                    <span key={i} className="flex items-center gap-2">
+                      <span className="flex items-center gap-2.5">
+                        <span className="flex h-11 w-11 items-center justify-center" style={{ backgroundColor: "rgba(43,108,176,0.08)", border: "1px solid rgba(43,108,176,0.2)", clipPath: "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)" }}>
+                          <FIcon className="h-5 w-5" style={{ color: "#2b6cb0" }} strokeWidth={1.5} />
+                        </span>
+                        <span className="text-[0.78rem] font-semibold" style={{ color: "#0b1f33" }}>{label}</span>
+                      </span>
+                      {i < t.quality.flowLabels.length - 1 && (
+                        <ChevronRight className="mx-1 h-4 w-4 shrink-0" style={{ color: "rgba(43,108,176,0.5)" }} />
+                      )}
+                    </span>
+                  );
+                })}
+              </div>
+              <Link href="/quality#quality-systems" className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg px-7 py-3.5 text-[0.85rem] font-bold transition-all duration-300 hover:shadow-lg" style={{ backgroundColor: "#2563eb", color: "#fff" }}>
+                {t.quality.flowCta}
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
