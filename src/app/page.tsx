@@ -11,7 +11,7 @@ export default function HomePage() {
 
   const exoStepImgs = [
     "/assets/korean-lab-team-DDgkd_gw.jpg",
-    "/assets/korean-scientist-vials-DxqjMGcR.jpg",
+    "/assets/harvesting.jpg",
     "/assets/molecular-CIuWq-Al.jpg",
     "/assets/cleanroom-DZtXjF0-.jpg",
     "/assets/qc-lab-mOryit6A.jpg",

@@ -84,7 +84,6 @@ export default function Header() {
 
         <nav className="hidden items-center gap-1 lg:flex">
           <NavLink href="/about" label={t.nav.about} items={[
-            { href: "/about", label: t.nav.about },
             { href: "/about/mission", label: t.nav.mission },
             { href: "/about/network", label: t.nav.network },
           ]} />
@@ -107,7 +106,6 @@ export default function Header() {
             {t.nav.researchAndDev}
           </Link>
           <NavLink href="/quality" label={t.nav.qualityMgmt} items={[
-            { href: "/quality", label: t.nav.qualityMgmt },
             { href: "/insights", label: t.nav.insights },
             { href: "/faq", label: t.nav.faq },
           ]} />

@@ -63,7 +63,7 @@ export default function QualityPage() {
             </ScrollReveal>
             <ScrollReveal className="hidden lg:block">
               <div className="overflow-hidden rounded-[1.75rem]" style={{ boxShadow: "0 25px 60px rgba(11,31,51,0.15)" }}>
-                <img src={`${BASE}/assets/qc-lab-side2.jpg`} alt="Quality laboratory" className="aspect-[5/5] w-full object-cover" />
+                <img src={`${BASE}/assets/qc-lab-mOryit6A.jpg`} alt="Quality laboratory" className="aspect-[5/5] w-full object-cover" />
               </div>
             </ScrollReveal>
           </div>
