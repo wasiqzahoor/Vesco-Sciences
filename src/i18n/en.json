@@ -638,36 +638,46 @@
     "heroSubtitle": "Every batch follows a documented pathway. Control points are defined in advance, executed under procedure and recorded for traceability.",
     "sectionEyebrow": "QUALITY MANAGEMENT",
     "sectionTitle": "Quality From Source to Shipment",
+    "sectionDesc": "From raw materials to final distribution, quality is integrated throughout our development and manufacturing process.",
     "steps": [
       {
         "num": "01",
-        "title": "Raw Material"
+        "title": "Raw Material",
+        "desc": "Controlled evaluation of high-quality raw materials."
       },
       {
         "num": "02",
-        "title": "Production"
+        "title": "Production",
+        "desc": "Defined and monitored manufacturing processes."
       },
       {
         "num": "03",
-        "title": "In-process QC"
+        "title": "In-process QC",
+        "desc": "Real-time checks during every production stage."
       },
       {
         "num": "04",
-        "title": "Final QC"
+        "title": "Final QC",
+        "desc": "Full release testing of finished products."
       },
       {
         "num": "05",
-        "title": "Batch Release"
+        "title": "Batch Release",
+        "desc": "Documented approval before every shipment."
       },
       {
         "num": "06",
-        "title": "Storage"
+        "title": "Storage",
+        "desc": "Temperature-controlled secure storage."
       },
       {
         "num": "07",
-        "title": "Distribution"
+        "title": "Distribution",
+        "desc": "Cold chain logistics maintained worldwide."
       }
     ],
+    "flowLabels": ["Raw Materials", "Manufacturing", "Testing", "Quality Review", "Distribution"],
+    "flowCta": "Explore Our Quality System",
     "systemsEyebrow": "QUALITY MANAGEMENT",
     "systemsTitle": "Quality systems",
     "systems": [
@@ -1161,7 +1171,7 @@
                   "num": "VS-BEX-001",
                   "title": "ExoGenesis™ 10B Scalp Kit",
                   "desc": "ExoGenesis™ 10B Scalp Kit with 9-Peptide Scalp Diluent for targeted scalp regenerative applications.",
-                  "img": "/ProductsImages/Exogenesis Scalp 10B/_DSC9558.JPG",
+                  "img": "/ProductsImages/Exogenesis Scalp 10B/10b scalp.png",
                   "tags": [
                     "ExoGenesis™",
                     "Scalp Kit"
@@ -1176,7 +1186,7 @@
                   "num": "VS-BEX-002",
                   "title": "ExoGenesis™ 15B Scalp Kit",
                   "desc": "ExoGenesis™ 15B Scalp Kit with 13-Peptide Vital Diluent for advanced scalp regenerative applications.",
-                  "img": "/ProductsImages/Exogenesis Scalp 15B/_DSC9618.JPG",
+                  "img": "/ProductsImages/Exogenesis Scalp 15B/15B scalp.png",
                   "tags": [
                     "ExoGenesis™",
                     "Scalp Kit"
@@ -1205,7 +1215,7 @@
                   "num": "VS-BEX-004",
                   "title": "ExoGenesis™ 10B Vital Kit",
                   "desc": "ExoGenesis™ 10B Vital Kit with 9-Peptide Scalp Diluent for skin rejuvenation applications.",
-                  "img": "/ProductsImages/Exogenesis Vital 10B/_DSC9645.JPG",
+                  "img": "/ProductsImages/Exogenesis Vital 10B/10b vital.png",
                   "tags": [
                     "ExoGenesis™",
                     "Vital Kit"
@@ -1220,7 +1230,7 @@
                   "num": "VS-BEX-005",
                   "title": "ExoGenesis™ 15B Vital Kit",
                   "desc": "ExoGenesis™ 15B Vital Kit with 13-Peptide Vital Diluent for advanced skin rejuvenation.",
-                  "img": "/ProductsImages/Exogenesis Vital 15B/1 (3).png",
+                  "img": "/ProductsImages/Exogenesis Vital 15B/15B vital.png",
                   "tags": [
                     "ExoGenesis™",
                     "Vital Kit"
@@ -1786,7 +1796,7 @@
                   "num": "VS-BPV-001",
                   "title": "BlueVive Booster 300 mg + HA Diluent 10 mL",
                   "desc": "BlueVive Booster 300 mg with HA Diluent 10 mL for comprehensive bio-remodeling.",
-                  "img": "/ProductsImages/Blue Vive Booster/DSC01099.JPG",
+                  "img": "/ProductsImages/Blue Vive Booster/DSC01099.png",
                   "tags": [
                     "BlueVive Booster",
                     "Collaboration"
