@@ -4,10 +4,23 @@ import Link from "next/link";
 import { useI18n } from "@/i18n/context";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEOHead from "@/components/SEOHead";
-import { Atom, Layers, FileText, Globe, Microscope, Dna, FlaskConical, Shield, ClipboardCheck, Clock, Box, Truck, Scan, PackageCheck, Warehouse, Send } from "lucide-react";
+import { Atom, Layers, FileText, Globe, Microscope, Dna, FlaskConical, Shield, ShieldCheck, ClipboardCheck, Clock, Box, Truck, Scan, PackageCheck, Warehouse, Send, Target, Factory, ArrowDown } from "lucide-react";
 
 export default function HomePage() {
   const { t } = useI18n();
+
+  const exoStepImgs = [
+    "/assets/korean-lab-team-DDgkd_gw.jpg",
+    "/assets/korean-scientist-vials-DxqjMGcR.jpg",
+    "/assets/molecular-CIuWq-Al.jpg",
+    "/assets/cleanroom-DZtXjF0-.jpg",
+    "/assets/qc-lab-mOryit6A.jpg",
+    "/assets/lyophilizer-DgNX1AUL.jpg",
+    "/assets/documents-C3E9fEEy.jpg",
+    "/assets/vials-Ck5soEMR.jpg",
+    "/assets/facility-wide-shot-DX9sQqs2.jpg",
+    "/assets/seoul-biotech-campus-D3ksiCpk.jpg",
+  ];
 
   return (
     <>
@@ -160,60 +173,61 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== 05. EXOSOME FEATURE — Dark with process flow ===== */}
-      <section className="relative isolate overflow-hidden" style={{ backgroundColor: "#0b1f33" }}>
-        <img src="/assets/exosome-BUYrBGuc.jpg" alt="" className="absolute inset-0 h-full w-full object-cover" style={{ opacity: 0.12 }} />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(7,23,38,0.97), rgba(11,31,51,0.88))" }} />
-        <div className="absolute top-1/2 right-0 h-[400px] w-[400px] rounded-full blur-[160px]" style={{ background: "radial-gradient(circle, rgba(53,184,176,0.1), transparent 70%)" }} />
-        <div className="relative mx-auto w-full max-w-[1240px] px-6 py-24 text-white md:px-10 md:py-32">
-          <div className="grid gap-16 lg:grid-cols-[1fr_1.1fr] lg:items-start">
+      {/* ===== 05. EXOSOME FEATURE — Light modern (reference design) ===== */}
+      <section className="relative overflow-hidden" style={{ backgroundColor: "#f1f6fa" }}>
+        <div className="absolute -top-24 -left-24 h-[380px] w-[380px] rounded-full blur-[140px]" style={{ background: "radial-gradient(circle, rgba(53,184,176,0.14), transparent 70%)" }} />
+        <div className="absolute right-0 bottom-0 h-[420px] w-[420px] rounded-full blur-[160px]" style={{ background: "radial-gradient(circle, rgba(39,106,145,0.10), transparent 70%)" }} />
+        <div className="relative mx-auto w-full max-w-[1240px] px-6 py-24 md:px-10 md:py-32">
+          <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-start">
             <ScrollReveal>
               <div>
-                <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5" style={{ background: "linear-gradient(135deg, rgba(53,184,176,0.2), rgba(53,184,176,0.05))", border: "1px solid rgba(53,184,176,0.3)" }}>
-                  <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#35b8b0" }} />
-                  <span className="text-[0.68rem] font-bold tracking-[0.14em] uppercase" style={{ color: "#35b8b0" }}>{t.exosome.eyebrow}</span>
+                <p className="text-[0.8rem] font-bold tracking-[0.18em] uppercase" style={{ color: "#2aa79f" }}>{t.exosome.eyebrow}</p>
+                <span className="mt-2 block h-[3px] w-12 rounded-full" style={{ backgroundColor: "#35b8b0" }} />
+                <h2 className="mt-5 max-w-xl text-[clamp(2rem,3.6vw,3rem)] leading-[1.1] font-extrabold" style={{ color: "#0b1f33", letterSpacing: "-0.02em" }}>{t.exosome.title}</h2>
+                <p className="mt-5 max-w-xl text-[1.02rem] leading-relaxed" style={{ color: "#5b6b7a" }}>{t.exosome.desc1}</p>
+                <div className="mt-8 overflow-hidden rounded-[2rem]" style={{ boxShadow: "0 25px 60px rgba(39,106,145,0.18)" }}>
+                  <img src="/assets/exosome-BUYrBGuc.jpg" alt="Exosome" className="aspect-[16/10] w-full object-cover" />
                 </div>
-                <h2 className="mt-6 text-[clamp(1.75rem,3.4vw,2.85rem)] leading-[1.12] font-semibold text-white" style={{ letterSpacing: "-0.025em" }}>{t.exosome.title}</h2>
-                <p className="mt-5 text-[1.0625rem] leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>{t.exosome.desc1}</p>
-                <p className="mt-4 text-[1.0625rem] leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>{t.exosome.desc2}</p>
-                <div className="mt-10 grid gap-px sm:grid-cols-3 rounded-xl overflow-hidden" style={{ border: "1px solid rgba(255,255,255,0.1)" }}>
-                  {t.exosome.features.map((feat, i) => (
-                    <div key={i} className="p-5" style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02))" }}>
-                      <h4 className="text-[0.85rem] font-bold">{feat.title}</h4>
-                      <p className="mt-1 text-[0.78rem]" style={{ color: "rgba(255,255,255,0.5)" }}>{feat.desc}</p>
+                <div className="mt-8 grid grid-cols-3 gap-3 sm:gap-6">
+                  {t.exosome.features.map((feat: { title: string; desc: string }, i: number) => (
+                    <div key={i} className="text-center">
+                      <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full" style={{ backgroundColor: "#fff", border: "1px solid rgba(53,184,176,0.25)", boxShadow: "0 8px 24px rgba(39,106,145,0.12)" }}>
+                        {i === 0 && <Target className="h-7 w-7" style={{ color: "#2aa79f" }} strokeWidth={1.5} />}
+                        {i === 1 && <Factory className="h-7 w-7" style={{ color: "#2aa79f" }} strokeWidth={1.5} />}
+                        {i === 2 && <ShieldCheck className="h-7 w-7" style={{ color: "#2aa79f" }} strokeWidth={1.5} />}
+                      </div>
+                      <h4 className="mt-3 text-[0.9rem] font-bold" style={{ color: "#0b1f33" }}>{feat.title}</h4>
+                      <p className="mt-1 text-[0.75rem] leading-relaxed" style={{ color: "#5b6b7a" }}>{feat.desc}</p>
                     </div>
                   ))}
                 </div>
-                <Link href="/technology/exosome" className="mt-8 inline-flex items-center gap-3 rounded-full px-7 py-3.5 text-[0.8rem] font-semibold tracking-[0.14em] uppercase transition-all duration-300" style={{ background: "linear-gradient(135deg, #35b8b0, #2a9d96)", color: "#05231f" }}>
-                  {t.exosome.cta}
-                </Link>
               </div>
             </ScrollReveal>
             <ScrollReveal>
-              <div>
-                <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-6" style={{ background: "linear-gradient(135deg, rgba(53,184,176,0.2), rgba(53,184,176,0.05))", border: "1px solid rgba(53,184,176,0.3)" }}>
-                  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="#35b8b0" strokeWidth="2"><path d="M12 2v20M2 12h20" /></svg>
-                  <span className="text-[0.68rem] font-bold tracking-[0.14em] uppercase" style={{ color: "#35b8b0" }}>{t.exosome.processTitle}</span>
-                </div>
-                <div className="rounded-2xl overflow-hidden" style={{ border: "1px solid rgba(255,255,255,0.1)", background: "linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01))" }}>
-                  {t.exosome.steps.map((step, i) => (
-                    <div key={i} className="flex items-center gap-4 px-6 py-4 transition-all duration-300 hover:bg-white/5" style={{ borderBottom: i < t.exosome.steps.length - 1 ? "1px solid rgba(255,255,255,0.06)" : "none" }}>
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-[0.65rem] font-bold" style={{ background: "linear-gradient(135deg, #35b8b0, #2a9d96)", color: "#05231f" }}>
-                        {String(i + 1).padStart(2, "0")}
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="text-[0.9rem] font-semibold">{step.title}</h4>
-                        <p className="mt-0.5 text-[0.78rem]" style={{ color: "rgba(255,255,255,0.45)" }}>{step.desc}</p>
+              <div className="relative overflow-hidden rounded-[1.75rem] p-6 sm:p-8" style={{ backgroundColor: "#fff", border: "1px solid rgba(221,229,236,0.9)", boxShadow: "0 25px 60px rgba(11,31,51,0.10)" }}>
+                <Dna className="pointer-events-none absolute top-1/2 -right-10 h-72 w-72 -translate-y-1/2" style={{ color: "rgba(39,106,145,0.06)" }} strokeWidth={1} />
+                <div className="relative">
+                  {t.exosome.steps.map((step: { title: string; desc: string }, i: number) => (
+                    <div key={i}>
+                      <div className="flex items-center gap-4">
+                        <img src={exoStepImgs[i % exoStepImgs.length]} alt="" className="h-14 w-14 shrink-0 rounded-full object-cover" style={{ border: "2px solid rgba(53,184,176,0.35)" }} />
+                        <div className="min-w-0">
+                          <h4 className="text-[0.85rem] font-extrabold uppercase" style={{ color: "#0b1f33", letterSpacing: "0.06em" }}>{i + 1}. {step.title}</h4>
+                          <p className="mt-0.5 text-[0.8rem] leading-relaxed" style={{ color: "#5b6b7a" }}>{step.desc}</p>
+                        </div>
                       </div>
                       {i < t.exosome.steps.length - 1 && (
-                        <svg className="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="rgba(53,184,176,0.4)" strokeWidth="2"><path d="M12 5v14M5 12l7 7 7-7" /></svg>
+                        <div className="py-1 pl-[22px]">
+                          <ArrowDown className="h-4 w-4" style={{ color: "#35b8b0" }} />
+                        </div>
                       )}
                     </div>
                   ))}
                 </div>
-                <div className="mt-6 rounded-xl px-5 py-3 text-center" style={{ background: "linear-gradient(135deg, rgba(53,184,176,0.12), rgba(53,184,176,0.04))", border: "1px solid rgba(53,184,176,0.25)" }}>
-                  <p className="text-[0.75rem] font-semibold tracking-[0.1em]" style={{ color: "#35b8b0" }}>{t.exosome.tagline}</p>
-                </div>
+                <Link href="/technology/exosome" className="relative mt-6 flex items-center justify-center gap-3 rounded-full px-6 py-4 text-[0.85rem] font-bold transition-all duration-300 hover:shadow-lg" style={{ background: "linear-gradient(135deg, #35b8b0, #2a9d96)", color: "#fff", boxShadow: "0 12px 30px rgba(53,184,176,0.35)" }}>
+                  <ShieldCheck className="h-5 w-5 shrink-0" />
+                  <span className="text-center leading-snug">{t.exosome.tagline}</span>
+                </Link>
               </div>
             </ScrollReveal>
           </div>
