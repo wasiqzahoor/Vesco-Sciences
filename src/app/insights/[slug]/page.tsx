@@ -116,6 +116,9 @@ export default function InsightDetailPage() {
             {/* Main content */}
             <article>
               <div className="max-w-3xl">
+                <div className="mb-10 overflow-hidden rounded-2xl" style={{ boxShadow: "0 20px 50px rgba(11,31,51,0.12)" }}>
+                  <img src={`${BASE}/assets/${article.image || "molecular-CIuWq-Al.jpg"}`} alt={article.title} className="aspect-[16/8] w-full object-cover" />
+                </div>
                 {paragraphs.map((p: string, i: number) => {
                   if (p.startsWith("1.") || p.startsWith("2.") || p.startsWith("3.") || p.startsWith("4.") || p.startsWith("5.") || p.startsWith("6.") || p.startsWith("7.") || p.startsWith("8.") || p.startsWith("9.")) {
                     const parts = p.split("\n").filter(Boolean);
