@@ -127,14 +127,17 @@ export default function InsightDetailPage() {
                   <img src={`${BASE}/assets/${article.image || "molecular-CIuWq-Al.jpg"}`} alt={article.title} className="aspect-[16/8] w-full object-cover" />
                 </div>
                 {paragraphs.map((p: string, i: number) => {
-                  if (p === "Feature" || p.startsWith("Feature\n")) {
-                    const lines = p.split("\n").filter(Boolean);
-                    const header = lines.slice(0, 3);
+                  const tableMarker = p.startsWith("TABLE2\n") ? 2 : p.startsWith("TABLE3\n") ? 3 : p.startsWith("TABLE4\n") ? 4 : 0;
+                  if (tableMarker > 0 || p === "Feature" || p.startsWith("Feature\n")) {
+                    const ncols = tableMarker > 0 ? tableMarker : 3;
+                    const allLines = p.split("\n").filter(Boolean);
+                    const lines = tableMarker > 0 ? allLines.slice(1) : allLines;
+                    const header = lines.slice(0, ncols);
                     const rows: string[][] = [];
-                    for (let r = 3; r < lines.length; r += 3) rows.push(lines.slice(r, r + 3));
+                    for (let r = ncols; r < lines.length; r += ncols) rows.push(lines.slice(r, r + ncols));
                     return (
                       <div key={i} className="mt-8 overflow-x-auto rounded-xl" style={{ border: "1px solid #dde5ec", backgroundColor: "#fff" }}>
-                        <table className="w-full min-w-[560px] border-collapse text-left">
+                        <table className={`w-full border-collapse text-left ${ncols > 3 ? "min-w-[720px]" : "min-w-[560px]"}`}>
                           <thead>
                             <tr style={{ backgroundColor: "#0b1f33" }}>
                               {header.map((h, j) => (

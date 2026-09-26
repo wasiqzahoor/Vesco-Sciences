@@ -676,7 +676,13 @@
         "desc": "Cold chain logistics maintained worldwide."
       }
     ],
-    "flowLabels": ["Raw Materials", "Manufacturing", "Testing", "Quality Review", "Distribution"],
+    "flowLabels": [
+      "Raw Materials",
+      "Manufacturing",
+      "Testing",
+      "Quality Review",
+      "Distribution"
+    ],
     "flowCta": "Explore Our Quality System",
     "stageCards": [
       {
@@ -4063,10 +4069,10 @@
       {
         "slug": "tff-and-ultrafiltration-explained",
         "tag": "Exosome Science",
-        "title": "Exosome Purification Methods: TFF, SEC, and Filtration Technologies Explained",
+        "title": "Exosome Purification Methods: TFF, SEC and Ultrafiltration Explained",
         "desc": "Exosome purification is essential for high-quality extracellular vesicle products. This article explains tangential flow filtration (TFF), size-exclusion chromatography (SEC), and filtration.",
         "image": "blogs-images/blog2.jpg",
-        "body": "Exosome purification is a critical step in the development and manufacturing of high-quality extracellular vesicle (EV) products. Because biological starting materials contain proteins, nucleic acids, lipoproteins, cell debris, and other extracellular components, an effective purification strategy is essential.\n\nWhy Is Exosome Purification Important? — Exosomes are nanoscale EVs, generally within 30–150 nm. The purification process aims to: Enrich EVs, Reduce soluble protein and contaminants, Remove cellular debris, Maintain vesicle structure and integrity, Improve batch-to-batch consistency.\n\n1. Ultrafiltration — Uses a semipermeable membrane to separate components by size. Advantage: simplicity and scalability. Consideration: membrane interactions and concentration-related stresses.\n\n2. TFF — Membrane-based technology for scalable bioprocessing. Feed flows parallel to the membrane, providing efficient concentration, diafiltration, reduced fouling, continuous processing, and better scale-up suitability.\n\n3. SEC — Separates by hydrodynamic size using porous stationary phase. Useful for reducing soluble protein contaminants. Limitation: lower concentration capacity.\n\nTFF vs. SEC vs. Ultrafiltration — UF: Simple concentration. TFF: Scalable concentration & buffer exchange. SEC: Effective removal of soluble contaminants.\n\nPurification Is Only One Part of Quality — Comprehensive characterization: NTA, TEM/cryo-TEM, protein assessment, sterility testing.\n\nFrom Purification to Reproducible Manufacturing — Integration of UF, TFF, SEC, and analytical characterization provides a framework for scalable purification.",
+        "body": "Exosome purification is a critical step in the development and manufacturing of high-quality extracellular vesicle (EV) products. Because biological starting materials contain proteins, nucleic acids, lipoproteins, cell debris, and other extracellular components, an effective purification strategy is essential for obtaining an enriched exosome preparation while preserving particle integrity and biological characteristics.\n\nAt VESCO Science, understanding the principles behind purification technologies such as Tangential Flow Filtration (TFF), Size-Exclusion Chromatography (SEC), and Ultrafiltration is fundamental to developing consistent and research-grade extracellular vesicle preparations.\n\n## Why Is Exosome Purification Important?\nExosomes are nanoscale extracellular vesicles, generally within the approximately 30–150 nm range, released by cells and surrounded by a lipid bilayer. During isolation, exosomes are accompanied by numerous other biological components.\n\nThe purification process therefore aims to:\nEnrich extracellular vesicles from the starting material\nReduce soluble protein and unwanted contaminants\nRemove cellular debris and larger particles\nMaintain vesicle structure and integrity\nImprove batch-to-batch consistency\nProduce material suitable for downstream characterization and research\n\nImportantly, no single purification method is universally optimal. The appropriate approach depends on the source material, desired purity, processing scale, recovery requirements, and intended application.\n\n## 1. Ultrafiltration: Membrane-Based Separation\nUltrafiltration (UF) uses a semipermeable membrane to separate components according to their size and molecular properties. Smaller molecules and soluble components can pass through the membrane, while larger particles such as extracellular vesicles are retained.\n\nA major advantage of ultrafiltration is its relative simplicity and scalability. It can be incorporated into workflows where concentration of extracellular vesicle preparations is required.\n\nHowever, conventional ultrafiltration can expose vesicles to membrane interactions and concentration-related stresses. Therefore, membrane selection, pressure, processing conditions, and recovery optimization are important for maintaining product quality.\n\n## 2. Tangential Flow Filtration (TFF): Scalable Processing\nTangential Flow Filtration (TFF) is a membrane-based technology widely used for scalable bioprocessing.\n\nUnlike conventional dead-end filtration, where the sample flows directly toward the membrane, TFF directs the feed parallel to the membrane surface. A portion of the fluid passes through the membrane as permeate, while larger particles are retained in the retentate.\n\nThis configuration can provide several advantages:\nEfficient concentration of extracellular vesicles\nDiafiltration for buffer exchange\nReduced membrane fouling compared with conventional filtration\nContinuous processing capability\nBetter suitability for scale-up\n\nTFF can therefore play an important role in moving from laboratory-scale EV isolation toward controlled and scalable manufacturing workflows.\n\n## 3. Size-Exclusion Chromatography (SEC): Separation by Size\nSize-Exclusion Chromatography (SEC) separates components according to their hydrodynamic size using a porous stationary phase.\n\nWhen an extracellular vesicle-containing sample passes through an SEC column, smaller molecules can enter the pores of the stationary phase and therefore take a longer pathway through the column. Larger particles, including extracellular vesicles, are preferentially excluded from these pores and can elute earlier.\n\nSEC is particularly useful for reducing soluble protein and other small molecular contaminants while operating under relatively gentle conditions.\n\nOne limitation is that SEC typically provides lower concentration capacity than membrane-based concentration techniques. For this reason, SEC may be incorporated as part of a multi-step purification workflow rather than used as the only processing step.\n\n## TFF vs. SEC vs. Ultrafiltration\n\nTABLE4\nMethod\nPrimary Principle\nMajor Advantage\nKey Consideration\nUltrafiltration\nMembrane-based size separation\nSimple concentration\nMembrane interaction and fouling\nTFF\nTangential membrane filtration\nScalable concentration & buffer exchange\nRequires process optimization\nSEC\nSize-based chromatography\nEffective removal of soluble contaminants\nLimited loading capacity\n\nIn advanced workflows, these technologies can be complementary rather than competing. For example, membrane-based processing may be used for concentration and buffer exchange, followed by chromatographic purification to improve separation from soluble contaminants.\n\n## Purification Is Only One Part of Exosome Quality\nA purified preparation should not be evaluated solely by its appearance or particle concentration. Comprehensive characterization is required to understand the identity, purity, size distribution, and overall quality of an extracellular vesicle preparation.\n\nCommon analytical approaches include:\nNanoparticle Tracking Analysis (NTA) for particle concentration and size distribution\nTransmission Electron Microscopy (TEM) or cryo-TEM for morphological assessment\nProtein and contaminant assessment\nAppropriate sterility and safety testing depending on the intended application\n\nThese complementary analyses help establish whether a purification process consistently produces the intended extracellular vesicle population.\n\n## From Purification to Reproducible Manufacturing\nThe objective of modern exosome processing is not simply to isolate more particles, but to establish a controlled process that delivers consistent and well-characterized extracellular vesicle preparations.\n\nThe integration of ultrafiltration, TFF, SEC, and analytical characterization provides a framework for developing scalable purification strategies. Process parameters such as membrane characteristics, flow conditions, concentration factors, buffer composition, and recovery should be carefully optimized and documented.\n\nFor a research-focused organization such as VESCO Science, purification technology forms an important component of a broader quality strategy—connecting upstream cell culture, downstream processing, analytical characterization, and batch consistency into a controlled manufacturing workflow.",
         "references": [
           {
             "num": 1,
@@ -4085,12 +4091,12 @@
           },
           {
             "num": 4,
-            "title": "NTA for particle concentration and size",
+            "title": "Nanoparticle Tracking Analysis (NTA) for particle concentration and size distribution",
             "url": "pubmed.ncbi.nlm.nih.gov/26563735/"
           },
           {
             "num": 5,
-            "title": "TEM / cryo-TEM",
+            "title": "Transmission Electron Microscopy (TEM) or cryo-TEM",
             "url": "pubmed.ncbi.nlm.nih.gov/26563735/"
           },
           {
@@ -4108,45 +4114,40 @@
       {
         "slug": "exosome-quality-attributes",
         "tag": "Exosome Science",
-        "title": "What Determines Exosome Quality? Understanding Critical Quality Attributes",
-        "desc": "Exosome quality cannot be reduced to a single particle count. This article explains a multi-attribute approach covering characteristics, purity, potency, and consistency.",
+        "title": "How Are Exosomes Characterized?",
+        "desc": "A Guide to Vesicle Morphology, Particle Size & Endotoxin Testing",
         "image": "blogs-images/blog3.jpg",
-        "body": "Exosomes are increasingly investigated for applications in regenerative medicine, drug delivery, dermatology, and biomedical research. Quality depends on multiple biological, physicochemical, manufacturing, and analytical parameters.\n\nWhat Are Critical Quality Attributes? — CQAs include: Particle size and distribution, Particle concentration, Morphological characteristics, Identity, Protein composition, Purity, Biological activity, Microbiological safety, Stability.\n\n1. Particle Size and Distribution — NTA provides information about particle concentration and size distribution.\n\n2. Morphological Characteristics — TEM or cryo-EM visualizes vesicular structures.\n\n3. Identity and Molecular Characteristics — Assessment of vesicle-associated proteins, membrane components, cargo profiles.\n\n4. Purity — Purification is critical for removing contaminants.\n\n5. Particle Count ≠ Quality — Quantity alone does not establish purity, identity, or safety.\n\n6. Biological Activity and Potency — Potency assays evaluate biological function.\n\n7. Stability and Storage — Quality can change during manufacturing, freezing, thawing, and storage.\n\nQC + QbD — Quality Control and Quality by Design together provide a systematic framework for consistent preparations.",
+        "body": "Exosomes and other extracellular vesicles (EVs) are nanoscale biological particles that require appropriate analytical characterization to understand their physical properties, concentration, morphology, and quality. Because biological nanoparticle preparations can vary according to their source and manufacturing process, systematic characterization is an essential part of exosome research and quality assessment.\n\nAt Vesco Science, characterization and quality evaluation are important components of the research process. Product-specific analytical and research reports can provide documented information about key parameters such as vesicle morphology, particle size, and endotoxin levels, helping researchers evaluate the consistency and quality profile of each product.\n\n## Why Is Exosome Characterization Important?\nExosome preparations are complex biological materials. Their characteristics can be influenced by the cell source, culture conditions, isolation technology, purification process, concentration, formulation, and storage conditions.\n\nA comprehensive characterization approach helps establish measurable information about the final preparation, including:\nVesicle morphology\nParticle-size distribution\nParticle concentration\nEndotoxin levels\nBatch-to-batch consistency\nOverall product quality\n\nRather than depending on a single analytical measurement, multiple complementary tests provide a more informative characterization profile.\n\n## 1. Vesicle Morphology\nVisual Analytics\nVesicle morphology refers to the physical appearance and structural characteristics of vesicles observed through high-resolution imaging techniques.\n\nMicroscopic visualization can help researchers assess whether the preparation contains structures consistent with nanoscale extracellular vesicles and evaluate their general morphology. Imaging is particularly useful as a visual component of a broader characterization strategy.\n\nMorphological analysis should be interpreted together with quantitative particle analysis because visual appearance alone cannot establish the complete identity or purity of an exosome preparation.\n\n## 2. Particle Size Analysis\nTechnical Data\nParticle size analysis provides quantitative information about the size distribution of particles present in an exosome preparation.\n\nFor nanoscale biological particles, Nanoparticle Tracking Analysis (NTA) is one commonly used analytical technique. NTA tracks the Brownian motion of individual particles in suspension and uses this information to estimate particle size and concentration.\n\nParticle-size analysis can help researchers evaluate:\nNanoscale particle distribution\nParticle concentration\nSample consistency\nDifferences between batches\nChanges associated with processing or storage\n\nImportantly, particle size alone cannot establish that all measured particles are exosomes. Other nanoscale particles and extracellular-vesicle populations may have overlapping size ranges. Therefore, size data should be considered as one component of a comprehensive characterization profile.\n\n## 3. Endotoxin Testing\nSafety Report\nEndotoxin testing is an important quality-control parameter for biologically derived materials.\n\nEndotoxins are components of the outer membrane of Gram-negative bacteria and can produce significant biological responses when present above appropriate levels. Testing for endotoxin helps evaluate the microbiological quality and safety profile of a preparation, particularly when the material is intended for research or advanced biomedical applications.\n\nEndotoxin results provide an additional layer of quality information beyond particle concentration and morphology. A comprehensive product assessment therefore considers both physical characterization and relevant safety-related analytical parameters.\n\n## Vesco Science: Product-Specific Research & Quality Reports\nAt Vesco Science, characterization is not limited to general information about exosomes. Product-specific research and quality reports are generated to document relevant analytical characteristics of individual products.\n\nDepending on the product and its intended research application, characterization data can include:\n\nTABLE2\nCharacterization Area\nPurpose\nVesicle Morphology\nVisual assessment of nanoscale vesicle structures\nParticle Size Analysis\nQuantitative evaluation of particle-size distribution\nParticle Concentration\nMeasurement of particle abundance\nEndotoxin Testing\nEvaluation of endotoxin levels as a quality parameter\nResearch / QC Report\nDocumentation of product-specific analytical findings\n\nThis product-level documentation supports traceability, quality assessment, and scientific transparency, allowing researchers and professional users to review analytical information associated with the material they are working with.\n\n## A Multi-Parameter Approach to Exosome Characterization\nReliable exosome characterization requires more than a single measurement. Morphology provides visual information, particle-size analysis provides quantitative data, and endotoxin testing provides an important quality and safety parameter.\n\nTogether, these analytical categories create a more comprehensive profile of an exosome preparation:\nVesicle Morphology → Particle Size & Concentration → Endotoxin Testing → Product-Specific Research/QC Report\n\nThis structured approach allows each product to be evaluated using measurable analytical parameters rather than relying solely on descriptive claims.\n\nFor researchers working with extracellular vesicles, access to documented characterization data is an important part of selecting, comparing, and evaluating exosome preparations.\n\n## Vesco Science Research-Driven Characterization\nThrough product-specific analytical evaluation and research documentation, Vesco Science aims to provide scientifically relevant data that supports the characterization and quality assessment of its exosome-based products. The combination of visual analytics, technical particle data, and safety-related testing provides a structured framework for understanding the quality profile of each preparation.",
         "references": [
           {
             "num": 1,
-            "title": "Critical Quality Attributes (CQAs)",
+            "title": "exosome characterization",
             "url": "pubmed.ncbi.nlm.nih.gov/38326288/"
           },
           {
             "num": 2,
-            "title": "Nanoparticle Tracking Analysis (NTA)",
-            "url": "pubmed.ncbi.nlm.nih.gov/26563735/"
+            "title": "vesicle morphology",
+            "url": "isevjournals.onlinelibrary.wiley.com/doi/10.1002/jev2.12404"
           },
           {
             "num": 3,
-            "title": "TEM / cryogenic electron microscopy",
-            "url": "pubmed.ncbi.nlm.nih.gov/26563735/"
+            "title": "Nanoparticle Tracking Analysis (NTA)",
+            "url": "pubmed.ncbi.nlm.nih.gov/39407601/"
           },
           {
             "num": 4,
-            "title": "Purity and process-related impurities",
-            "url": "pubmed.ncbi.nlm.nih.gov/34012565/"
+            "title": "particle size and concentration",
+            "url": "pubmed.ncbi.nlm.nih.gov/35737250/"
           },
           {
             "num": 5,
-            "title": "Biological activity and potency",
-            "url": "pubmed.ncbi.nlm.nih.gov/38326288/"
+            "title": "endotoxin testing",
+            "url": "pubmed.ncbi.nlm.nih.gov/36876926/"
           },
           {
             "num": 6,
-            "title": "Stability and storage",
-            "url": "pubmed.ncbi.nlm.nih.gov/34259095/"
-          },
-          {
-            "num": 7,
-            "title": "Quality by Design (QbD)",
-            "url": "fda.gov/media/71021/download"
+            "title": "batch-to-batch consistency",
+            "url": "pubmed.ncbi.nlm.nih.gov/38326288/"
           }
         ],
         "related": [
@@ -4203,45 +4204,45 @@
       {
         "slug": "huc-msc-derived-exosomes",
         "tag": "Exosome Science",
-        "title": "HUC-MSC-Derived Exosomes: What Makes Them Different?",
+        "title": "What Determines Exosome Quality? Understanding Critical Quality Attributes",
         "desc": "HUC-MSC-derived exosomes are gaining attention for their biologically active molecular cargo. This article explains their cellular origin, cargo characteristics, and growing interest in regenerative science.",
         "image": "blogs-images/blog5.jpg",
-        "body": "HUC-MSC-derived exosomes are increasingly studied as a promising class of extracellular vesicles for advanced biomedical and regenerative research.\n\nWhat Are HUC-MSC-Derived Exosomes? — Mesenchymal stromal cells from human umbilical cord tissue release various EVs. Cargo includes: Proteins, Lipids, mRNA, miRNAs, regulatory RNA molecules.\n\nWhy Does the Cell Source Matter? — HUC-MSCs originate from umbilical cord tissue, investigated for distinctive biological characteristics including proliferative capacity and secretory profile.\n\nMolecular Cargo — Exosomes carry proteins, lipids and nucleic acids for cell-to-cell communication. MicroRNAs influence gene expression.\n\nFrom Cell Culture to Isolation — Workflow: HUC-MSC expansion → culture → conditioned-medium collection → clarification → EV enrichment → purification → concentration → characterization.\n\nCharacterization — NTA for particle concentration and size, TEM/cryo-TEM for morphology, purity assessment.\n\nResearch Applications — Tissue repair, cell-to-cell communication, immunomodulation, skin biology, wound-healing, drug delivery.\n\nQuality Requirements — Defined cellular source, controlled manufacturing, appropriate purification, comprehensive characterization, stability and storage.",
+        "body": "Exosomes are increasingly investigated for applications in regenerative medicine, drug delivery, dermatology, and biomedical research. However, not all exosome preparations are equivalent. Their quality depends on multiple biological, physicochemical, manufacturing, and analytical parameters.\n\nFor research and translational applications, evaluating exosome quality requires a multi-attribute approach rather than relying on a single measurement such as particle concentration or one surface marker.\n\n## What Are Critical Quality Attributes?\nCritical Quality Attributes (CQAs) are measurable characteristics that can influence the identity, purity, consistency, safety, stability, or biological performance of a product.\n\nFor exosome-based preparations, important CQAs can include:\nParticle size and size distribution\nParticle concentration\nMorphological characteristics\nExosome or extracellular-vesicle identity\nProtein and biomolecular composition\nPurity and removal of unwanted contaminants\nBiological activity or potency\nMicrobiological safety\nStability during storage and transportation\n\nNo single attribute provides a complete picture of quality. Instead, these parameters should be considered together.\n\n## 1. Particle Size and Distribution\nExosomes are nanoscale extracellular vesicles, generally characterized within a small vesicular size range. However, an apparently appropriate particle size does not automatically confirm exosome identity.\n\nTechniques such as Nanoparticle Tracking Analysis (NTA) can provide information about particle concentration and size distribution. A consistent distribution can help establish batch-to-batch comparability and detect significant changes in the preparation.\n\n## 2. Morphological Characteristics\nParticle morphology provides another layer of characterization. Imaging techniques such as Transmission Electron Microscopy (TEM) or cryogenic electron microscopy can be used to visualize vesicular structures.\n\nMorphological assessment can support the presence of vesicle-like particles, but imaging should be interpreted alongside complementary analytical methods rather than used as a standalone identity test.\n\n## 3. Identity and Molecular Characteristics\nA high-quality exosome preparation should demonstrate characteristics consistent with its intended biological source and product definition.\n\nCharacterization may include assessment of vesicle-associated proteins, membrane components, cargo profiles, and source-specific biological characteristics. Depending on the intended application, techniques such as immunoassays, western blotting, flow-based analysis, proteomics, or other molecular methods may contribute to identity characterization.\n\nThe important principle is that identity should be established through multiple complementary attributes, not through a single biomarker.\n\n## 4. Purity and Process-Related Impurities\nExosome preparations can contain other extracellular particles, soluble proteins, nucleic acids, cellular debris, or process-related contaminants.\n\nTherefore, purification is a critical component of quality. Depending on the manufacturing strategy, methods may include ultrafiltration, size-exclusion chromatography, tangential flow filtration, density-based approaches, or combinations of purification technologies.\n\nThe objective is to obtain a preparation with a controlled impurity profile while maintaining the desired vesicle population and biological characteristics.\n\n## 5. Particle Concentration Is Not the Same as Quality\nA common misconception is that a higher particle count automatically represents a better exosome product.\n\nParticle concentration is an important quantitative attribute, but quantity alone does not establish purity, identity, biological activity, or safety.\n\nFor example, two preparations may contain similar particle concentrations while having substantially different impurity profiles or functional characteristics. Therefore, concentration should always be interpreted together with other CQAs.\n\n## 6. Biological Activity and Potency\nFor research and translational development, one of the most important questions is whether the preparation demonstrates the intended biological function.\n\nPotency-related assays can be designed according to the proposed mechanism of action and intended application. These may evaluate cellular responses, signaling pathways, migration, immunomodulatory effects, or other relevant biological endpoints.\n\nA well-designed potency strategy connects product characteristics → biological mechanism → measurable functional response.\n\n## 7. Stability and Storage\nExosome quality can change during manufacturing, freezing, thawing, lyophilization, transportation, and long-term storage.\n\nA robust quality program therefore evaluates relevant attributes over the product's intended storage period. Stability studies can monitor changes in particle characteristics, concentration, aggregation, morphology, molecular properties, and biological activity.\n\nThis is particularly important when establishing appropriate storage conditions, shelf life, and transportation requirements.\n\n## Vesco Science: Quality Through QC + QbD\nAt Vesco Science, the concept of exosome quality can be positioned around two complementary principles: Quality Control (QC) and Quality by Design (QbD).\n\nQC focuses on measuring predefined quality attributes and verifying that each batch meets established specifications.\n\nQbD, in contrast, begins earlier—by understanding how the biological source, upstream processing, purification, formulation, storage, and other process parameters can influence the final product's CQAs.\n\nTogether, QC and QbD provide a more systematic framework for developing consistent, characterized, and scientifically defined extracellular-vesicle preparations.\n\n## A Multi-Attribute Definition of Exosome Quality\nUltimately, exosome quality should not be reduced to a single number, image, or laboratory test. A scientifically robust characterization strategy considers identity, purity, particle characteristics, concentration, biological activity, safety, and stability as interconnected quality attributes.\n\nThis multi-attribute perspective is essential for improving batch consistency, supporting reproducible research, and advancing extracellular-vesicle technologies toward increasingly well-defined applications.\n\nVesco Science's QC + QbD approach reflects this broader principle: quality is not simply tested at the end—it is built into the understanding and control of the product and its manufacturing process.",
         "references": [
           {
             "num": 1,
-            "title": "HUC-MSC-derived exosomes",
-            "url": "pubmed.ncbi.nlm.nih.gov/34944535/"
+            "title": "Critical Quality Attributes (CQAs)",
+            "url": "pubmed.ncbi.nlm.nih.gov/38326288/"
           },
           {
             "num": 2,
-            "title": "molecular cargo",
-            "url": "pubmed.ncbi.nlm.nih.gov/33506022/"
-          },
-          {
-            "num": 3,
-            "title": "microRNAs (miRNAs)",
-            "url": "pubmed.ncbi.nlm.nih.gov/33758102/"
-          },
-          {
-            "num": 4,
-            "title": "cell-to-cell communication",
-            "url": "pubmed.ncbi.nlm.nih.gov/33506022/"
-          },
-          {
-            "num": 5,
             "title": "Nanoparticle Tracking Analysis (NTA)",
             "url": "pubmed.ncbi.nlm.nih.gov/26563735/"
           },
           {
-            "num": 6,
-            "title": "TEM / cryo-TEM",
+            "num": 3,
+            "title": "Transmission Electron Microscopy (TEM) or cryogenic electron microscopy",
             "url": "pubmed.ncbi.nlm.nih.gov/26563735/"
           },
           {
+            "num": 4,
+            "title": "Purity and process-related impurities",
+            "url": "pubmed.ncbi.nlm.nih.gov/34012565/"
+          },
+          {
+            "num": 5,
+            "title": "Biological activity and potency",
+            "url": "pubmed.ncbi.nlm.nih.gov/38326288/"
+          },
+          {
+            "num": 6,
+            "title": "Stability and storage",
+            "url": "pubmed.ncbi.nlm.nih.gov/34259095/"
+          },
+          {
             "num": 7,
-            "title": "tissue repair and regeneration",
-            "url": "pubmed.ncbi.nlm.nih.gov/34944535/"
+            "title": "Quality by Design (QbD)",
+            "url": "www.fda.gov/media/71021/download"
           }
         ],
         "related": [
