@@ -149,9 +149,9 @@ export default function ResearchPage() {
           <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_1fr]">
             <ScrollReveal>
               <div className="flex flex-col gap-4">
-                {t.rdDetail.exosomeCargo.map((item: { icon: string; label: string; desc: string }, i: number) => (
+                {t.rdDetail.exosomeCargo.map((item: { icon: string; img: string; label: string; desc: string }, i: number) => (
                   <div key={i} className="flex items-center gap-4 rounded-sm p-4" style={{ border: "1px solid rgba(255,255,255,0.1)", backgroundColor: "rgba(255,255,255,0.03)" }}>
-                    <span className="text-xl shrink-0">{item.icon}</span>
+                    <img src={`${BASE}/assets/${item.img}`} alt={item.label} className="h-10 w-10 shrink-0 rounded-lg object-cover" style={{ border: "1px solid rgba(53,184,176,0.3)" }} />
                     <div>
                       <span className="text-[0.85rem] font-semibold" style={{ color: "#fff" }}>{item.label}</span>
                       <span className="ml-2 text-[0.78rem]" style={{ color: "rgba(255,255,255,0.5)" }}>{item.desc}</span>
@@ -162,7 +162,7 @@ export default function ResearchPage() {
             </ScrollReveal>
             <ScrollReveal>
               <div className="relative overflow-hidden rounded-sm">
-                <img src={`${BASE}/assets/exo-809kxbsn.png`} alt="" className="w-full object-contain p-6" />
+                <img src={`${BASE}/assets/exosome-BUYrBGuc.jpg`} alt="Exosome research" className="w-full rounded-sm object-cover" />
               </div>
             </ScrollReveal>
           </div>
@@ -232,7 +232,7 @@ export default function ResearchPage() {
             </ScrollReveal>
             <ScrollReveal>
               <div className="relative overflow-hidden rounded-sm">
-                <img src={`${BASE}/assets/ac-3KR1Pimt.png`} alt="" className="w-full object-contain p-4" />
+                <img src={`${BASE}/assets/qc-lab-mOryit6A.jpg`} alt="Analytical laboratory" className="w-full rounded-sm object-cover" />
               </div>
             </ScrollReveal>
           </div>
@@ -328,10 +328,10 @@ export default function ResearchPage() {
             </p>
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {t.rdDetail.qbdItems.map((item: { icon: string; title: string; desc: string }, i: number) => (
+            {t.rdDetail.qbdItems.map((item: { icon: string; img: string; title: string; desc: string }, i: number) => (
               <ScrollReveal key={i}>
                 <div className="flex h-full flex-col rounded-sm p-6" style={{ border: "1px solid rgba(255,255,255,0.1)", backgroundColor: "rgba(255,255,255,0.03)" }}>
-                  <span className="text-xl">{item.icon}</span>
+                  <img src={`${BASE}/assets/${item.img}`} alt={item.title} className="h-12 w-12 rounded-lg object-cover" style={{ border: "1px solid rgba(53,184,176,0.3)" }} />
                   <h3 className="mt-3 text-[0.9rem] font-semibold text-white">{item.title}</h3>
                   <p className="mt-2 text-[0.78rem] leading-relaxed" style={{ color: "rgba(255,255,255,0.6)" }}>{item.desc}</p>
                 </div>

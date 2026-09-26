@@ -5483,21 +5483,25 @@
     "exosomeCargo": [
       {
         "icon": "🧬",
+        "img": "res-dna.jpg",
         "label": "DNA",
         "desc": "Genetic Material Cargo"
       },
       {
         "icon": "🔬",
+        "img": "res-protein.jpg",
         "label": "Proteins",
         "desc": "Functional Protein Content"
       },
       {
         "icon": "📜",
+        "img": "res-mrna.jpg",
         "label": "mRNA",
         "desc": "Messenger RNA Payload"
       },
       {
         "icon": "🎯",
+        "img": "qc-micro.jpg",
         "label": "miRNA",
         "desc": "Regulatory microRNA"
       }
@@ -5602,26 +5606,31 @@
     "qbdItems": [
       {
         "icon": "📋",
+        "img": "qbd-cqa.jpg",
         "title": "Critical Quality Attributes",
         "desc": "Identifying product characteristics essential to safety and efficacy."
       },
       {
         "icon": "⚙️",
+        "img": "qbd-params.jpg",
         "title": "Critical Process Parameters",
         "desc": "Defining and controlling process variables that affect quality."
       },
       {
         "icon": "⚠️",
+        "img": "qbd-risk.jpg",
         "title": "Risk Assessment",
         "desc": "Evaluating and mitigating risks throughout development."
       },
       {
         "icon": "🎛️",
+        "img": "qbd-control.jpg",
         "title": "Process Control",
         "desc": "Implementing controls to maintain consistent process performance."
       },
       {
         "icon": "✅",
+        "img": "vials-Ck5soEMR.jpg",
         "title": "Consistent Product Quality",
         "desc": "Delivering products that reliably meet defined specifications."
       }

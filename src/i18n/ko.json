@@ -3959,21 +3959,25 @@
     "exosomeCargo": [
       {
         "icon": "🧬",
+        "img": "res-dna.jpg",
         "label": "DNA",
         "desc": "유전 물질 화물"
       },
       {
         "icon": "🔬",
+        "img": "res-protein.jpg",
         "label": "단백질",
         "desc": "기능적 단백질 함량"
       },
       {
         "icon": "📜",
+        "img": "res-mrna.jpg",
         "label": "mRNA",
         "desc": "메신저 RNA 페이로드"
       },
       {
         "icon": "🎯",
+        "img": "qc-micro.jpg",
         "label": "miRNA",
         "desc": "조절 마이크로RNA"
       }
@@ -4078,26 +4082,31 @@
     "qbdItems": [
       {
         "icon": "📋",
+        "img": "qbd-cqa.jpg",
         "title": "핵심 품질 속성",
         "desc": "안전성과 효능에 필수적인 제품 특성을 식별합니다."
       },
       {
         "icon": "⚙️",
+        "img": "qbd-params.jpg",
         "title": "핵심 공정 매개변수",
         "desc": "품질에 영향을 미치는 공정 변수를 정의하고 제어합니다."
       },
       {
         "icon": "⚠️",
+        "img": "qbd-risk.jpg",
         "title": "위험 평가",
         "desc": "개발 전반에 걸쳐 위험을 평가하고 완화합니다."
       },
       {
         "icon": "🎛️",
+        "img": "qbd-control.jpg",
         "title": "공정 관리",
         "desc": "일관된 공정 성과를 유지하기 위해 관리를 구현합니다."
       },
       {
         "icon": "✅",
+        "img": "vials-Ck5soEMR.jpg",
         "title": "일관된 제품 품질",
         "desc": "정의된 사양을 안정적으로 충족하는 제품을 제공합니다."
       }
