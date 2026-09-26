@@ -151,7 +151,7 @@ export default function ResearchPage() {
               <div className="flex flex-col gap-4">
                 {t.rdDetail.exosomeCargo.map((item: { icon: string; img: string; label: string; desc: string }, i: number) => (
                   <div key={i} className="flex items-center gap-4 rounded-sm p-4" style={{ border: "1px solid rgba(255,255,255,0.1)", backgroundColor: "rgba(255,255,255,0.03)" }}>
-                    <img src={`${BASE}/assets/${item.img}`} alt={item.label} className="h-10 w-10 shrink-0 rounded-lg object-cover" style={{ border: "1px solid rgba(53,184,176,0.3)" }} />
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-[0.85rem] font-bold" style={{ border: "1px solid rgba(53,184,176,0.3)", backgroundColor: "rgba(53,184,176,0.08)", color: "#35b8b0" }}>{i + 1}</span>
                     <div>
                       <span className="text-[0.85rem] font-semibold" style={{ color: "#fff" }}>{item.label}</span>
                       <span className="ml-2 text-[0.78rem]" style={{ color: "rgba(255,255,255,0.5)" }}>{item.desc}</span>
@@ -232,7 +232,7 @@ export default function ResearchPage() {
             </ScrollReveal>
             <ScrollReveal>
               <div className="relative overflow-hidden rounded-sm">
-                <img src={`${BASE}/assets/qc-lab-mOryit6A.jpg`} alt="Analytical laboratory" className="w-full rounded-sm object-cover" />
+                <img src={`${BASE}/assets/qc-lab-mOryit6A.jpg`} alt="Analytical laboratory" className="aspect-[4/3] w-full rounded-sm object-cover" />
               </div>
             </ScrollReveal>
           </div>
